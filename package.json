@@ -1,21 +1,21 @@
 {
-  "name": "JS-Project",
+  "name": "Filmoteka",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://cerbugabriel.github.io/JS-Project",
+  "homepage": "https://github.com/CristinaAI22/Filmoteka.git",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /JS-Project/"
+    "build": "parcel build src/*.html --public-url /Filmoteka/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cerbugabriel/JS-Project.git"
+    "url": "git+https://github.com/CristinaAI22/Filmoteka.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cerbugabriel/JS-Project/issues"
+    "url": "https://github.com/CristinaAI22/Filmoteka.git/issues"
   },
   "dependencies": {
     "modern-normalize": "^2.0.0"
