@@ -1,0 +1,45 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+.example {
+  line-height: 1.5;
+  background-color: #fff;
+  color: #2f2f37;
+  max-width: 960px;
+  padding: 16px;
+}
+.example code {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #ff6b0a;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+.example .background {
+  height: 240px;
+  background-image: url('../src/images/logo.png');
+  background-size: cover;
+  background-position: center;
+}
+.test-gallery {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.test-gallery__card {
+  width: 250px;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.test-gallery__card:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+.test-gallery__card img {
+  height: 250px;
+} /*# sourceMappingURL=index.min.css.map */
