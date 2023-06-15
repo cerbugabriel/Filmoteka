@@ -1,7 +1,6 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
 @import './utils/vars';
-@import './common';
-@import './example';
-@import './cards';
+@import './components/cards';
 @import './components/footer';
 @import './utils/general-styles';
 @import './utils/modal';
