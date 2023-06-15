@@ -1,7 +1,7 @@
 // imports
 import axios from 'axios';
-import { API_KEY } from './utils.js';
-import { currentPage } from './utils.js';
+import { API_KEY } from '../js-files/utils.js';
+import { currentPage } from '../js-files/utils.js';
 import { setupGallery } from './setupGallery.js';
 // let currentPage = '3';
 
