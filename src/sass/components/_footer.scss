@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: $grey-bg;
+  &__inner {
+    display: flex;
+  }
+  &__pagination {
+    background-color: $white-color;
+    border: 2px solid red;
+  }
+  &__text {
+    color: #545454;
+  }
+}
