@@ -26,3 +26,28 @@
   background-size: cover;
   background-position: center;
 }
+
+.test-gallery {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__card {
+    width: 250px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+      scale: 1.1;
+    }
+  }
+
+  &__card img {
+    height: 250px;
+  }
+}
