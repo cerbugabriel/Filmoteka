@@ -78,4 +78,23 @@ ul {
 }
 a {
   text-decoration: none;
+}
+.film_info_modal {
+  background-color: #fff;
+  border: 3px solid #ffb8ca;
+  position: fixed;
+  max-width: 550px;
+  height: 610px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  margin: auto auto;
+  padding: 30px;
+}
+.modal {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 } /*# sourceMappingURL=index.min.css.map */
