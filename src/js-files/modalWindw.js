@@ -1,3 +1,8 @@
 const modal = document.getElementById('film_info_modal');
-const modalWindow = document.getElementById('modal');
-const backdrop = document.getElementById('close-modal');
+const modalWind = document.getElementById('modal');
+const closeLocationModal = document.querySelector('.close-button');
+const openLocationModal = document.querySelector('.test-gallery__card');
+
+openLocationModal.addEventListener('click', () => {
+  locationModal.showModal();
+});

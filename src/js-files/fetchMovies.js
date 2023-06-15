@@ -1,4 +1,4 @@
-// imports
+// importsxios
 import axios from 'axios';
 import { API_KEY } from '../js-files/utils.js';
 import { currentPage } from '../js-files/utils.js';
