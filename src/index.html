@@ -14,12 +14,13 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./sass/index.scss" />
+    <link rel="stylesheet" href="../css/index.min.css" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <include src="./partials/example.html"></include>
+    <!--Header-->
     <include src="./partials/header.html"></include>
     <header> 
       <div class="inner-container">
@@ -52,21 +53,18 @@
             filme(https://developer.themoviedb.org/reference/trending-all)
             <!--de utilizat o librarie aici, poate swiper? -->
           </div>
-          <ul>
-            lista cu filme
+          <ul class="test-gallery">
+            <li class="test-gallery__card">
+              <img
+                src="https://image.tmdb.org/t/p/w500//bj3FUtnQ34bsTM7IygK8dUHESEO.jpg"
+                alt=""
+              />
+              <h2>Name : BlackBerry</h2>
+              <h4>Comedy, Drama</h4>
+            </li>
           </ul>
         </div>
       </section>
-      <footer>
-        <div class="'inner-container">
-          <p>text all reserved...</p>
-        </div>
-
-        <p>salut</p>
-
-        <p>hjhkhkhk</p>
-
-      </footer>
     </main>
   </body>
 </html>
