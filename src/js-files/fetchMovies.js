@@ -1,4 +1,4 @@
-// imports
+// importsxios
 import axios from 'axios';
 import { API_KEY, currentPage, BASE_URL } from '../js-files/utils.js';
 import { setupGallery } from './setupGallery.js';
