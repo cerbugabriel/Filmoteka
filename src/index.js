@@ -1,6 +1,6 @@
 // imports
 import { fetchAllMovies } from './js-files/fetchMovies';
-import { handlePagination } from './js-files/pagination';
+// import { handlePagination } from './js-files/pagination';
 import getElement from './js-files/getElement';
 // fetchAllMovies();
 
@@ -16,8 +16,8 @@ function galleryHandler(e) {
 
 const init = () => {
   fetchAllMovies();
-  event();
-  handlePagination();
+  // event();
+  // handlePagination();
 };
 
 window.addEventListener('DOMContentLoaded', init);
