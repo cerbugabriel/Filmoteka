@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   margin: 60px 0;
+
   &__container {
     display: flex;
     justify-content: center;
@@ -11,34 +12,59 @@
     border: 2px solid pink;
     gap: $gap;
   }
+
   &__button {
     width: 40px;
     height: 40px;
     border: none;
     border-radius: 5px;
     background-color: $white-color;
+
     &:hover {
       background-color: $brand-color;
       color: $white-color;
     }
+
     &:active {
       background-color: $brand-color;
       color: $white-color;
     }
   }
 }
+
+.active {
+  background-color: $brand-color;
+  color: $white-color;
+}
+
+.number-buttons {
+  display: flex;
+}
+
 .next-btn,
 .prev-btn {
   background-color: $grey-bg;
 }
+
+.dot-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: $grey-bg;
+  font-weight: 900;
+}
+
 @media screen and (min-width: 768px) {
   .pagination {
     flex-basis: 768px;
+
     &__container {
       flex-basis: 374px;
     }
   }
 }
+
 @media screen and (min-width: 1280px) {
   .pagination {
     flex-basis: 1280px;
