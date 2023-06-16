@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { API_KEY, BASE_URL, PER_PAGE, currentPage } from './utils';
 import { fetchAllMovies } from './fetchMovies.js';
-let totalPages=0;
+let totalPages = 0;
 export const handlePagination = async () => {
   try {
     const url = `${BASE_URL}/trending/all/day?language=en-US&api_key=${API_KEY}`;
@@ -46,4 +46,4 @@ document.getElementById('next-btn').addEventListener('click', () => {
 });
 
 // Initialize pagination
-handlePagination();
+// handlePagination();
