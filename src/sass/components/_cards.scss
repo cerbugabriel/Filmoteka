@@ -1,17 +1,17 @@
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin-top: 1.33%;
 }
 .photo-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*align-items: center;*/
-  width: 33%;
-  margin-right: 0.5%;
-  margin-bottom: 0.5%;
-  background-color: rgb(255, 228, 196);
+
+  width: 28%;
+  margin: $gap;
+  cursor: pointer;
   border-radius: 5px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -28,33 +28,50 @@
 .container-info {
   display: flex;
   flex-direction: column;
-  background-color: cornflowerblue;
   margin-top: 1%;
+  margin-bottom: 1%;
+
   .cont-descr {
     display: flex;
     flex-direction: row;
     gap: 5px;
-    background-color: aqua;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    .descr-item {
+      color: $brand-color;
+    }
   }
 }
-/*.info {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  max-width: 100%;
-  background-color: crimson;
+.title {
+  text-transform: uppercase;
+  color: $brand-color;
+  color: #000;
 }
-.container-info {
-  display: flex;
-  flex-direction: column;
-  align-items: self-start;
-}
-.cont-descr {
-  display: flex;
-  flex-direction: row;
-  gap: 1%;
-  background-color: chartreuse;
-  .descr-item {
-    background-color: aquamarine;
+@media (min-width: 300px) and (max-width: 599px) {
+  .photo-card {
+    width: 90%;
+    background-color: blue;
   }
-}*/
+  .photo-card:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  .photo-card {
+    width: 45%;
+    margin: $gap;
+  }
+  .photo-card:nth-child(2n) {
+    margin-right: 0;
+  }
+  .image {
+    margin-bottom: 5px;
+  }
+
+  .cont-descr {
+    height: 50px;
+
+    font-size: 12px;
+  }
+}
