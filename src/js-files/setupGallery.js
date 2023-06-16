@@ -9,6 +9,7 @@ export const setupGallery = data => {
               <img
                 src="https://image.tmdb.org/t/p/w500${movie.poster_path}"
                 alt="${movie.title}"
+                id="movie"
               />
               <h2>Name : ${movie.title}</h2>
               <h4>Release date: ${movie.release_date}</h4>
