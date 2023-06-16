@@ -12,14 +12,3 @@ filmImage.addEventListener('click', () => {
 closeModal.addEventListener('click', () => {
   modal.close();
 });
-
-// const filmImage = document.querySelector('#movie');
-// console.log(filmImage);
-// const modal = document.getElementById('film_info_modal');
-// const modalImageContainer = document.querySelector('.img_content');
-
-// filmImage.addEventListener('click', event => {
-//   console.log(filmImage);
-//   console.log('event.target: ', event.target);
-//   console.log('event.currentTarget: ', event.currentTarget);
-// });
