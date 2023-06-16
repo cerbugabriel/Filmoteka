@@ -1,20 +1,30 @@
 // importsxios
 import axios from 'axios';
-import { API_KEY } from '../js-files/utils.js';
-import { currentPage } from '../js-files/utils.js';
+import { API_KEY, currentPage, BASE_URL } from '../js-files/utils.js';
 import { setupGallery } from './setupGallery.js';
-// let currentPage = '3';
 
 // exports
 export const fetchAllMovies = async () => {
   try {
-    const url = `https://api.themoviedb.org/3/trending/all/day?language=en-US&page=${currentPage}&api_key=${API_KEY}`;
-
+    const url = `${BASE_URL}/trending/all/day?language=en-US&api_key=${API_KEY}`;
     const resp = await axios.get(url);
     const data = resp.data;
     const movies = data.results;
-    setupGallery(movies);
+    const movieTypes = await getMoviesType();
+    setupGallery(movies, movieTypes);
   } catch (err) {
     console.log(err);
   }
 };
+
+async function getMoviesType() {
+  try {
+    const url = `${BASE_URL}/genre/movie/list?api_key=${API_KEY}`;
+    const resp = await axios.get(url);
+    let data = resp.data;
+    data = data.genres;
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
