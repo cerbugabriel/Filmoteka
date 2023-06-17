@@ -1,26 +1,12 @@
 // imports
 import { fetchAllMovies } from './js-files/fetchMovies';
-// import { handlePagination } from './js-files/pagination';
 import { handlePagination } from './js-files/utils';
-import getElement from './js-files/getElement';
-// fetchAllMovies();
+import { fetchPopularMovies } from './js-files/carousel';
 
-// const event = () => {
-//   const gallery = getElement('.gallery');
-//   gallery.addEventListener('click', galleryHandler);
-// };
-
-// function galleryHandler(e) {
-//   const element = e.target.parentNode;
-//   console.log(element);
-// }
-
-const init = () => {
+const init = async () => {
   fetchAllMovies();
-  // window.scrollTo({ top: 0, behavior: 'smooth' });
-
-  // event();
   handlePagination();
+  fetchPopularMovies();
 };
 
 window.addEventListener('DOMContentLoaded', init);
