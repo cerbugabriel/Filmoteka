@@ -2,6 +2,8 @@
 import { fetchAllMovies } from './js-files/fetchMovies';
 // import { handlePagination } from './js-files/pagination';
 import { handlePagination } from './js-files/utils';
+import { fetchPopularMovies } from './js-files/carousel';
+fetchPopularMovies();
 import getElement from './js-files/getElement';
 // fetchAllMovies();
 
