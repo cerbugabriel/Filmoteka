@@ -23,6 +23,11 @@ function galleryHandler(e) {
   const average = elementInfo.getAttribute('data-vote-avg');
   modalVotes.innerHTML = `Vote / Votes: ${average} / ${voteCount}`;
 
+  // add movie id to the modal
+  const modalContainer = getElement('.modal');
+  const movieId = element.dataset.id;
+  modalContainer.dataset.movieId = movieId;
+
   //image work
   const movieImage = element.querySelector('img');
   const imageLink = movieImage.getAttribute('src');
