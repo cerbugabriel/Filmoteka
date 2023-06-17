@@ -23,11 +23,6 @@ function galleryHandler(e) {
   const average = elementInfo.getAttribute('data-vote-avg');
   modalVotes.innerHTML = `Vote / Votes: ${average} / ${voteCount}`;
 
-  // add movie id to the modal
-  const modalContainer = getElement('.modal');
-  const movieId = element.dataset.id;
-  modalContainer.dataset.movieId = movieId;
-
   //image work
   const movieImage = element.querySelector('img');
   const imageLink = movieImage.getAttribute('src');
@@ -58,10 +53,10 @@ function galleryHandler(e) {
   const filmDescription = elementInfo.getAttribute('data-about');
   modalFilmDescription.innerHTML += ` ${filmDescription} `;
 
-  //movie id
-  const movieId = element.getAttribute('data-id');
-  const modalChild = getElement('.modal');
-  modalChild.setAttribute('data-movieId', movieId);
+  // add movie id to the modal
+  const modalContainer = getElement('.modal');
+  const movieId = element.dataset.id;
+  modalContainer.dataset.movieId = movieId;
 
   modal.showModal();
 }
