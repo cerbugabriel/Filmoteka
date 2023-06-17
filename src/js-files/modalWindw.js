@@ -58,6 +58,11 @@ function galleryHandler(e) {
   const filmDescription = elementInfo.getAttribute('data-about');
   modalFilmDescription.innerHTML += ` ${filmDescription} `;
 
+  //movie id
+  const movieId = element.getAttribute('data-id');
+  const modalChild = getElement('.modal');
+  modalChild.setAttribute('data-movieId', movieId);
+
   modal.showModal();
 }
 
@@ -73,3 +78,10 @@ function clearModalOnClose() {
     element.innerHTML = '';
   });
 }
+
+window.onclick = e => {
+  if (e.target == modal) {
+    clearModalOnClose();
+    modal.close();
+  }
+};
