@@ -53,10 +53,10 @@ function galleryHandler(e) {
   const filmDescription = elementInfo.getAttribute('data-about');
   modalFilmDescription.innerHTML += ` ${filmDescription} `;
 
-  //movie id
-  const movieId = element.getAttribute('data-id');
-  const modalChild = getElement('.modal');
-  modalChild.setAttribute('data-movieId', movieId);
+  // add movie id to the modal
+  const modalContainer = getElement('.modal');
+  const movieId = element.dataset.id;
+  modalContainer.dataset.movieId = movieId;
 
   modal.showModal();
 }
