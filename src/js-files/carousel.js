@@ -1,4 +1,5 @@
 import { API_KEY, BASE_URL } from './utils';
+import { showWarning } from './loader';
 
 export const fetchPopularMovies = async () => {
   try {
@@ -10,6 +11,7 @@ export const fetchPopularMovies = async () => {
     startCarousel();
   } catch (err) {
     console.log(err);
+    showWarning();
   }
 };
 
