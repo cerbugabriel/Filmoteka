@@ -178,5 +178,11 @@ img {
   fill: #000000;
   stroke: transparent !important;
   stroke-width: 0 !important;
-  // stroke-opacity: 0;
+}
+
+dialog::backdrop {
+  position: fixed;
+  filter: blur(8px);
+  -webkit-filter: blur(4px);
+  backdrop-filter: sepia(50%);
 }
