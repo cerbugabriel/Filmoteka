@@ -53,7 +53,6 @@ img {
   font-size: 20px;
   cursor: pointer;
   opacity: 0.7;
-  stroke: none !important;
 }
 
 .buttons {
@@ -176,8 +175,6 @@ img {
   background-color: #fff;
   color: #fff;
   fill: #000000;
-  stroke: transparent !important;
-  stroke-width: 0 !important;
 }
 
 dialog::backdrop {
