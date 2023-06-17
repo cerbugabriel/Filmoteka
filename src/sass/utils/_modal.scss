@@ -1,0 +1,111 @@
+.film_info_modal {
+  background-color: white;
+  border: none;
+  position: fixed;
+  max-width: 806px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  z-index: 5;
+  margin: auto auto;
+  padding: 30px;
+}
+.content {
+  display: flex;
+  gap: $gap * 2;
+  flex-direction: row;
+}
+img {
+  width: 280px;
+  height: 350px;
+}
+
+.close-button {
+  width: 30px;
+  cursor: pointer;
+  margin: -10;
+  float: right;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.buttons .add-to-watch {
+  width: 171px;
+  height: 44px;
+  border-radius: 22px;
+  cursor: pointer;
+  color: #d41443;
+  border-color: #d41443;
+
+  &:hover,
+  &:focus {
+    max-width: 210px;
+    transform: scale(1.1);
+    background-color: #d41443;
+    color: white;
+  }
+}
+@media screen and (max-width: 420px) {
+  .film_info_modal {
+    width: 100%;
+    height: 55%;
+  }
+  .img_content {
+    width: 240px;
+    height: 350px;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-to-watch {
+    width: 198px;
+    height: 45px;
+  }
+}
+
+.film_title {
+  font-family: 'Roboto' sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+
+  color: #000000;
+}
+
+.group {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #8c8c8c;
+  margin: 4px;
+}
+
+.movie-info {
+  gap: $gap;
+  margin: 20px 0;
+}
+
+.film_about {
+  margin: 20px 0;
+}

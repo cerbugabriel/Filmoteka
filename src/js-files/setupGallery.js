@@ -8,22 +8,31 @@ export const setupGallery = (data, movieTypes) => {
     .map(movie => {
       let {
         genre_ids: movieType,
-        name,
+        title: name,
+        name: nameAlternativ,
         poster_path: movieImg,
         release_date: releaseDate,
         id,
       } = movie;
       movieType = displaMovieType(movieType, movieTypes);
       releaseDate = getRealeaseDate(releaseDate);
+      name = name ? name : nameAlternativ;
       movieImg = movieImg
         ? `https://image.tmdb.org/t/p/w500${movieImg}`
         : `../images/no-signal-img.jpg`;
       return `<div class="photo-card" data-id="${id}" >
-  <a href="">
+      <div
+        class="modal-info"
+        data-vote-avg="${movie.vote_average}"
+        data-vote-count="${movie.vote_count}"
+        data-popularity="${movie.popularity}"
+        data-about="${movie.overview}"
+        data_original_title="${movie.original_title}"
+        >
+      </div>
     <img src="${movieImg}" class="image" alt="${name}" />
-  </a>
   <div class="container-info">
-    <b>${name}</b>
+    <b class="title">${name}</b>
     <div class="cont-descr">
       <p class="descr-item">${movieType}</p>
       <p class="descr-item">|</p>
