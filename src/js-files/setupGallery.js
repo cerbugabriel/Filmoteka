@@ -21,6 +21,15 @@ export const setupGallery = (data, movieTypes) => {
         ? `https://image.tmdb.org/t/p/w500${movieImg}`
         : `../images/no-signal-img.jpg`;
       return `<div class="photo-card" data-id="${id}" >
+      <div
+        class="modal-info"
+        data-vote-avg="${movie.vote_average}"
+        data-vote-count="${movie.vote_count}"
+        data-popularity="${movie.popularity}"
+        data-about="${movie.overview}"
+        data_original_title="${movie.original_title}"
+        >
+      </div>
     <img src="${movieImg}" class="image" alt="${name}" />
   <div class="container-info">
     <b class="title">${name}</b>
