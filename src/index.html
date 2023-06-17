@@ -20,35 +20,28 @@
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <include src="./partials/example.html"></include>
+
     <!--Header-->
-    <include src="./partials/header.html"></include>
+    <!-- <include src="./partials/header.html"></include> -->
 
     <main>
-      <section class="gallery">
-        <div class="inner-container">
-          <!--Carousel-->
-          <include src="./partials/carousel.html"></include>
-          <include src="./partials/cards.html"></include>
-          <!-- <ul class="test-gallery">
-            <li class="test-gallery__card">
-              <img
-                src="https://image.tmdb.org/t/p/w500//bj3FUtnQ34bsTM7IygK8dUHESEO.jpg"
-                alt=""
-              />
-              <h2>Name : BlackBerry</h2>
-              <h4>Comedy, Drama</h4>
-            </li>
-          </ul> -->
-        </div>
-      </section>
+      <!--Carousel-->
+      <include src="./partials/carousel.html"></include>
+
+      <!-- movies gallery -->
+      <include src="./partials/cards.html"></include>
+
       <!--popUp-->
       <include src="./partials/popUpWindow.html"></include>
 
+      <!-- buttons for pagination -->
       <include src="./partials/pagination.html"></include>
     </main>
-    <!--Footer-->
 
+    <!--Footer-->
     <include src="./partials/footer.html"></include>
+
+    <!-- main script -->
     <script src="./js-files/modalWindw.js" type="module"></script>
   </body>
 </html>
