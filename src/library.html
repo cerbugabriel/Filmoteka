@@ -14,13 +14,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <!--<include src="./partials/example.html"></include>-->
     <include src="./partials/header.html"></include>
-    <header>
+    <!-- <header>
       <div class="inner-container">
         <div class="logo">
           <a href=""></a>
@@ -36,16 +37,32 @@
           </div>
         </nav>
       </div>
-    </header>
+    </header>-->
     <main>
-      <section>
-        <div class="'inner-container">
-          <ul>
-            Galerie filme
-            <!--aducem<li> cu js pt filme-->
-          </ul>
-          <button>buton pt UP</button>
+      <section class="container">
+        <div class="no-movie">
+          <img
+            class="images-watched"
+            src="/src/images/stockvault-digital-video-camera.jpg"
+            alt="movie-logo"
+          />
+          <h4 class="text">
+            Movies haven't been added yet, but let's pick something that suits
+            your taste.
+          </h4>
         </div>
+      </section>
+      <section>
+        <div id="library-gallery">
+          <!-- Aici vor fi adăugate cardurile -->
+        </div>
+        <!--<div class="'inner-container">
+          <ul>
+            Galerie filme-->
+        <!--aducem<li> cu js pt filme-->
+        <!-- </ul>
+          <button>buton pt UP</button>
+        </div>-->
       </section>
     </main>
     <footer>

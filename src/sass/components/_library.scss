@@ -1,0 +1,36 @@
+/*.container {
+  display: flex;
+  justify-content: center;
+  background-color: chartreuse;
+  // width: 90%;
+
+}  */
+.no-movie {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .images-watched {
+    position: relative;
+    overflow: hidden;
+    width: 973px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 500px;
+  }
+  .text {
+    position: absolute;
+    top: 0;
+    right: 272px;
+    text-align: center;
+    z-index: 1;
+    font-size: 39px;
+    width: 732px;
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+}
