@@ -13,21 +13,23 @@
   .images-watched {
     position: relative;
     overflow: hidden;
-    width: 973px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    //width: 973px;
     display: flex;
     justify-content: center;
     margin-top: 500px;
   }
   .text {
     position: absolute;
-    top: 0;
-    right: 272px;
+    top: 180px;
+    right: 244px;
     text-align: center;
     z-index: 1;
     font-size: 39px;
-    width: 732px;
+    width: 832px;
+    background-color: $brand-color;
+    color: $white-color;
+    text-transform: uppercase;
   }
 }
 

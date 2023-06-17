@@ -46,12 +46,12 @@
 .title {
   text-transform: uppercase;
   color: $brand-color;
-  color: #000;
+  color: $color;
 }
 @media (min-width: 300px) and (max-width: 599px) {
   .photo-card {
     width: 90%;
-    background-color: blue;
+    // background-color: blue;
   }
   .photo-card:nth-child(3n) {
     margin-right: 0;
