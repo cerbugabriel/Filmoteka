@@ -11,6 +11,7 @@
     line-height: 38px;
     align-items: center;
     text-align: center;
+    margin-left: 10px;
   }
   &__container {
     margin: 20px auto;
@@ -35,25 +36,20 @@
       justify-content: center;
       align-items: center;
       &--link {
-        color: #ffffff;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 8px;
-      }
-      &--icon {
-        display: flex;
-        position: relative;
-        overflow: hidden;
-        width: 32px;
-        height: 32px;
-        &-svg {
-          width: 32px;
-          height: 32px;
-          fill: none;
-          position: absolute;
-          animation: movieScrolling 3s linear infinite;
-          transform: translateY(100%);
+        color: #fff;
+        fill: currentColor;
+        &--icon {
+          display: flex;
+          position: relative;
+          overflow: hidden;
+          &-svg {
+            width: 50px;
+            height: 80px;
+          }
         }
       }
     }
@@ -140,12 +136,16 @@
     &__container {
       position: relative;
       &--icon {
-        width: 16px;
-        height: 16px;
+        width: 18px;
+        height: 18px;
         fill: #ffffff;
         stroke: #000000;
-        :hover {
-          stroke: #902221;
+        position: absolute;
+        left: -15px;
+        top: -16px;
+        transition: transform 0.7s ease-in-out;
+        &:hover {
+          transform: rotate(360deg);
         }
       }
       &--error {
