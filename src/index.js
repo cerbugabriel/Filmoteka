@@ -11,4 +11,4 @@ const init = async () => {
   addToLocalStorag();
 };
 
-window.addEventListener('DOMContentLoaded', init);
+window.addEventListener('load', init);

@@ -1,10 +1,10 @@
 // imports
 import getElement from './getElement';
 
-const toWatch = 'toWatch';
-const toQueue = 'toQueue';
+export const toWatch = 'toWatch';
+export const toQueue = 'toQueue';
 
-const getStorageItem = item => {
+export const getStorageItem = item => {
   let storageItem = localStorage.getItem(item);
   if (storageItem) {
     storageItem = JSON.parse(localStorage.getItem(item));
