@@ -32,5 +32,4 @@ function goToPage(e) {
     currentPage = currentPage + 1;
     fetchAllMovies();
   }
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
