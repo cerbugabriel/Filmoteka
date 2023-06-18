@@ -21,7 +21,9 @@ function galleryHandler(e) {
   const elementInfo = element.querySelector('.modal-info');
   const voteCount = elementInfo.getAttribute('data-vote-count');
   const average = elementInfo.getAttribute('data-vote-avg');
-  modalVotes.innerHTML = `Vote / Votes: ${average} / ${voteCount}`;
+  const numm = Number(average);
+  const averageRounded = Math.round(numm * 10) / 10;
+  modalVotes.innerHTML = `Vote / Votes: ${averageRounded} / ${voteCount}`;
 
   //image work
   const movieImage = element.querySelector('img');
@@ -35,7 +37,9 @@ function galleryHandler(e) {
 
   //film popularity
   const filmPopularity = elementInfo.getAttribute('data-popularity');
-  modalFilmPopularity.innerHTML = `Popularity: ${filmPopularity} `;
+  const number = Number(filmPopularity);
+  const popularityNumber = Math.round(number);
+  modalFilmPopularity.innerHTML = `Popularity: ${popularityNumber} `;
 
   //film original title
   const filmOriginalName = elementInfo.getAttribute('data_original_title');

@@ -82,7 +82,8 @@ img {
     color: white;
   }
 }
-@media screen and (max-width: 530px) {
+
+@media screen and (min-width: 420px) and (max-width: 600px) {
   .film_info_modal {
     width: 100%;
     height: 55%;
