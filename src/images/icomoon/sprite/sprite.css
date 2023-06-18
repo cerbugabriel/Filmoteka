@@ -1,0 +1,16 @@
+.icon {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url(sprite.svg);
+}
+.icon-moon-o {
+  width: 23px;
+  height: 28px;
+  background-position: 0 0;
+}
+.icon-brightness_high {
+  width: 24px;
+  height: 24px;
+  background-position: 0 -44px;
+}
+
