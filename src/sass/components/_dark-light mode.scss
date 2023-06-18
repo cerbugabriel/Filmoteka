@@ -1,11 +1,13 @@
 .dl-btn {
+  position: absolute;
+  top: 0;
   background-color: #fff;
   width: 60px;
   height: 32px;
   border-radius: 40px;
   box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
     inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
-  position: relative;
+  //position: relative;
   display: flex;
   align-items: center;
   cursor: pointer;
