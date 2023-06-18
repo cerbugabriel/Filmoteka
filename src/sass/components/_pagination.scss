@@ -31,12 +31,22 @@
     }
   }
 }
-
+.darkmode .pagination__button {
+  background-color: #2b2b2b;
+  color: #fff;
+}
 .active {
   background-color: $brand-color;
   color: $white-color;
 }
-
+.darkmode .active {
+  background-color: $brand-color;
+  color: $white-color;
+}
+.darkmode .pagination__button:hover {
+  background-color: $brand-color;
+  color: $white-color;
+}
 .number-buttons {
   display: flex;
 }
