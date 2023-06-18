@@ -45,6 +45,14 @@
     transform: rotate(360deg);
   }
 }
+.fa-moon.animated {
+  animation: spin 0.5s;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 body.darkmode {
   background-color: #2b2b2b;
 }
@@ -58,6 +66,7 @@ body.darkmode {
   background-color: #2b2b2b;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
 }
-.darkmode .fa-sun {
+.darkmode .fa-moon {
   color: #fff;
+  fill: currentColor;
 }
