@@ -84,3 +84,5 @@ window.onclick = e => {
     modal.close();
   }
 };
+
+// team modal

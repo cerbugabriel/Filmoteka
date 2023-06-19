@@ -1,6 +1,10 @@
 * {
   outline: 1;
 }
+
+body {
+  background-color: 'currentColor';
+}
 .film_info_modal {
   background-color: white;
   border: none;
@@ -20,7 +24,6 @@
 
   overflow: hidden;
   display: flex;
-  overflow-y: scroll;
 }
 .content {
   display: flex;
