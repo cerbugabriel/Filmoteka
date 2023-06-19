@@ -59,3 +59,26 @@ dlBtn.addEventListener('click', () => {
     iconMoon.classList.remove('anmated');
   }, 500);
 });
+
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+const svgIcon = document.querySelector('.scroll-btn__icon ');
+window.addEventListener('scroll', function () {
+  if (window.scrollY > window.innerHeight / 2) {
+    scrollToTopBtn.style.display = 'block';
+    svgIcon.style.transform = 'rotate(180deg)';
+  } else {
+    scrollToTopBtn.style.display = 'none';
+    svgIcon.style.transform = 'rotate(0deg)';
+  }
+});
+
+scrollToTopBtn.addEventListener('click', function () {
+  scrollToTop();
+});
+
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}

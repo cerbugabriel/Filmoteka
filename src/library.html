@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,36 +15,27 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <script src="./library.js" type="module"></script>
   </head>
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
     <!--<include src="./partials/example.html"></include>-->
-    <include src="./partials/header.html"></include>
-    <!-- <header>
-      <div class="inner-container">
-        <div class="logo">
-          <a href=""></a>
-        </div>
-        <nav>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-          <div class="buttons-container">
-            <button></button>
-            <button></button>
-          </div>
-        </nav>
-      </div>
-    </header>-->
+    <include src="./partials/header-library.html"></include>
+
+    <!--dark mode-->
+    <include src="./partials/dark-light mode.html"></include>
     <main>
-      <section class="container">
+      <section>
         <div class="no-movie">
           <!--la apasarea butoanelor trebuie adaugata clasa "is-hidden"-->
+          <!--la stergerea filmelor din librarie trebuie adaugata clasa "is-visibile "-->
           <img
             class="images-watched"
-            src="/src/images/movie-theater-4609877_1280.jpg"
+            srcset="
+              .images/movie-theater-4609877_640.jpg       640w,
+              /src/images/movie-theater-4609877_1280.jpg 1280w
+            "
+            src="./images/movie-theater-4609877_1280.jpg"
             alt="digital video camera"
           />
           <h4 class="text">

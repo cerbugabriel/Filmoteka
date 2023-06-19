@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,21 +31,29 @@
       <!-- movies gallery -->
       <include src="./partials/cards.html"></include>
 
-      <!--popUp-->
+      <!-- popUp-->
       <include src="./partials/popUpWindow.html"></include>
 
       <!-- buttons for pagination -->
       <include src="./partials/pagination.html"></include>
     </main>
 
-    <!--Footer-->
+    <!--dark/light mode-->
     <include src="./partials/dark-light mode.html"></include>
 
     <!--Footer-->
 
     <include src="./partials/footer.html"></include>
 
+    <div class="sroll-btn-container">
+      <button type="button" class="scroll-btn" id="scrollToTopBtn">
+        <svg class="scroll-btn__icon">
+          <use href="./images/symbol-defs2.svg#icon-eject"></use>
+        </svg>
+      </button>
+    </div>
     <!-- main script -->
+
     <script src="./js-files/modalWindw.js" type="module"></script>
   </body>
 </html>

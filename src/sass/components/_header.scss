@@ -1,5 +1,6 @@
 .container {
-  width: 480px;
+  width: 480px; //cod David
+  //width: 100vw; //cod eu
   max-width: 100%;
   margin: 0 auto;
 }
@@ -15,7 +16,7 @@
   }
   &__container {
     margin: 20px auto;
-    background: url('/src/images/background320w.png');
+    background: url('./images/background320w.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -23,11 +24,15 @@
     display: flex;
     flex-direction: column;
     padding: 14px 14px 20px 14px;
-    width: 100%;
-    max-width: 280px;
+    width: 100vw; //cod eu
+    //width: 100%;//cod david
+    max-width: 280px; //cod david
     height: 460px;
     &--bar {
       padding-bottom: 312px;
+      width: 90%; //cod eu
+      // background-color: aqua; //cod eu
+      margin-left: 5%;
     }
     &__logo {
       display: flex;
@@ -164,14 +169,15 @@
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .header__container {
-    background: url('/src/images/abstract320w2x\ \(1\).png');
+    background: url('./images/abstract320w2x\ \(1\).png');
     background-size: cover;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    width: 768px;
+    //width: 768px;//cod David
+    width: 1279;
   }
   ::placeholder {
     font-size: 14px;
@@ -199,13 +205,15 @@
       }
     }
     &__container {
-      background: url('/src/images/background768w.png');
+      background: url('./images/background768w.png');
       padding: 16px;
-      width: 100%;
-      max-width: 704px;
+      //width: 100%;//cod David
+      width: 100vw;
+      max-width: 1200px;
       height: 222px;
       margin: 32px auto;
-      background-size: contain;
+      //background-size: contain;//cod David
+      background-size: cover; //cod eu
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 10px;
@@ -257,7 +265,7 @@
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     .header__container {
-      background: url('/src/images/abstract768w2x\ \(1\).png');
+      background: url('./images/abstract768w2x\ \(1\).png');
       background-size: cover;
     }
   }
@@ -265,7 +273,8 @@
 
 @media (min-width: 1280px) {
   .container {
-    width: 1280px;
+    //width: 1280px;//cod David
+    width: 100vw; //cod eu
   }
   .header {
     &__title {
@@ -273,12 +282,15 @@
       line-height: 75px;
     }
     &__container {
-      background: url('/src/images/headerimages1280w.jpg');
-      padding: 16px 0 32px 32px;
-      width: 100%;
-      max-width: 1216px;
+      background: url('./images/headerimages1280w.jpg');
+      padding: 16px 0 32px 32px; //cod David
+      width: 100vw; //cod eu
+      //width: 100%;//cod David
+      //max-width: 1216px; //cod David
+      max-width: 1600px;
       height: 316px;
-      background-size: contain;
+      //background-size: contain;//cod David
+      background-size: cover; //cod eu
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 10px;
@@ -319,7 +331,7 @@
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     .header__container {
-      background: url('/src/images/abstract1280w2x.png');
+      background: url('./images/abstract1280w2x.png');
       background-size: cover;
     }
   }
