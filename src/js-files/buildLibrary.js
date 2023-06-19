@@ -19,7 +19,7 @@ const noMovie = getElement('.no-movie');
 
 const buildsLibrary = async selectedLibrary => {
   showLoader();
-  noMovie.classList.add('is-hidden');
+  noMovie.classList.remove('is-hidden');
   try {
     let localStorageMovies = getStorageItem(selectedLibrary);
     localStorageMovies = getIds(localStorageMovies);
