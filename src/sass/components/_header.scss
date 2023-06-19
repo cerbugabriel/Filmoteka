@@ -16,7 +16,7 @@
   }
   &__container {
     margin: 20px auto;
-    background: url('./images/background320w.png');
+    background: url('../images/background320w.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -169,7 +169,7 @@
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .header__container {
-    background: url('./images/abstract320w2x\ \(1\).png');
+    background: url('../images/abstract320w2x\ \(1\).png');
     background-size: cover;
   }
 }
@@ -205,7 +205,7 @@
       }
     }
     &__container {
-      background: url('./images/background768w.png');
+      background: url('../images/background768w.png');
       padding: 16px;
       //width: 100%;//cod David
       width: 100vw;
@@ -265,7 +265,7 @@
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     .header__container {
-      background: url('./images/abstract768w2x\ \(1\).png');
+      background: url('../images/abstract768w2x\ \(1\).png');
       background-size: cover;
     }
   }
@@ -282,7 +282,7 @@
       line-height: 75px;
     }
     &__container {
-      background: url('./images/headerimages1280w.jpg');
+      background: url('../images/headerimages1280w.jpg');
       padding: 16px 0 32px 32px; //cod David
       width: 100vw; //cod Ioana
       //width: 100%;//cod David
@@ -331,7 +331,7 @@
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     .header__container {
-      background: url('./images/abstract1280w2x.png');
+      background: url('../images/abstract1280w2x.png');
       background-size: cover;
     }
   }
