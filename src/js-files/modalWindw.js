@@ -1,4 +1,9 @@
 import getElement from './getElement';
+import {
+  getStorageItem,
+  adjunstQueueBtns,
+  adjunstWatchBtns,
+} from './locatStorage';
 
 const modal = getElement('#film_info_modal');
 const modalImageContainer = getElement('.img_content');
@@ -9,14 +14,17 @@ const modalOriginaFilmTitle = getElement('.film-detail_original-title');
 const modalFilmGenre = getElement('.film-detail_genre');
 const modalFilmDescription = getElement('.film-detail_description');
 
+const watchBtn = getElement('watch');
+const queueBtnt = getElement('queue');
+
 const closeModal = getElement('#close-button');
 
 const gallery = getElement('.gallery');
+
 gallery.addEventListener('click', galleryHandler);
 
 function galleryHandler(e) {
   const element = e.target.parentNode;
-
   //average work
   const elementInfo = element.querySelector('.modal-info');
   const voteCount = elementInfo.getAttribute('data-vote-count');
@@ -61,6 +69,13 @@ function galleryHandler(e) {
   const modalContainer = getElement('.modal');
   const movieId = element.dataset.id;
   modalContainer.dataset.movieId = movieId;
+  // btns
+  let watchStorage = getStorageItem(toWatch);
+  let queueStorage = getStorageItem(toQueue);
+
+  console.log(watchBtn);
+  adjunstWatchBtns(watchStorage, watchBtn, movieId);
+  adjunstQueueBtns(queueStorage, queueBtnt, movieId);
 
   modal.showModal();
 }
@@ -77,6 +92,10 @@ function clearModalOnClose() {
     element.innerHTML = '';
   });
 }
+
+window.onclick = e => {
+  console.log(e.target);
+};
 
 window.onclick = e => {
   if (e.target == modal) {
