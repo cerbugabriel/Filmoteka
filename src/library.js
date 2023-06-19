@@ -1,4 +1,5 @@
 // imports
-import { buildsLibrary } from './js-files/buildLibrary';
+import { renderLibrary } from './js-files/buildLibrary';
 
-window.addEventListener('DOMContentLoaded', buildsLibrary);
+window.addEventListener('DOMContentLoaded', renderLibrary);
+// renderLibrary();

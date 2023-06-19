@@ -19,12 +19,13 @@
   </head>
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <!--<include src="./partials/example.html"></include>-->
+    <!-- <include src="./partials/example.html"></include> -->
     <include src="./partials/header-library.html"></include>
 
     <!--dark mode-->
     <include src="./partials/dark-light mode.html"></include>
     <main>
+      <section class="library-gallery"></section>
       <section>
         <div class="no-movie">
           <!--la apasarea butoanelor trebuie adaugata clasa "is-hidden"-->
@@ -32,14 +33,10 @@
           <img
             class="images-watched"
             srcset="
-
-              ./images/movie-theater-4609877_640.jpg      640w,
-              /src/images/movie-theater-4609877_1280.jpg 1280w
-
-            
-
+              images/movie-theater-4609877_640.jpg   640w,
+              images/movie-theater-4609877_1280.jpg 1280w
             "
-            src="./images/movie-theater-4609877_1280.jpg"
+            src="images/movie-theater-4609877_1280.jpg"
             alt="digital video camera"
           />
           <h4 class="text">
