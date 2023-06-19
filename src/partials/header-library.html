@@ -18,14 +18,28 @@
         </ul>
       </nav>
       <div class="header__library">
-        <ul class="header__btn">
+        <button
+          type="button"
+          class="btns-container__btn active-library"
+          data-whichLibrary="watched"
+        >
+          Watched
+        </button>
+        <button
+          type="button"
+          class="btns-container__btn"
+          data-whichLibrary="queue"
+        >
+          Queue
+        </button>
+        <!-- <ul class="header__btn">
           <li class="header__watched--item header__watched--selected">
-            <a href="#" class="header__watched--item-link">Watched</a>
+            <button class="header__watched--item-link">Watched</button>
           </li>
           <li class="header__queue--item">
-            <a href="#" class="header__queue--item-link">Queue</a>
+            <button class="header__queue--item-link">Queue</button>
           </li>
-        </ul>
+        </ul> -->
       </div>
       <!--<form class="header__search" id="form__search">
           <span class="header__search__container">

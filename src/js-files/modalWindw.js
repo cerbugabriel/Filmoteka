@@ -12,6 +12,7 @@ const gallery = getElement('.gallery');
 gallery.addEventListener('click', galleryHandler);
 function galleryHandler(e) {
   const element = e.target.parentNode;
+
   //average work
   const elementInfo = element.querySelector('.modal-info');
   const voteCount = elementInfo.getAttribute('data-vote-count');
