@@ -36,15 +36,22 @@
 
       <!-- buttons for pagination -->
       <include src="./partials/pagination.html"></include>
+      
     </main>
 
-    <!--Footer-->
+    <!--dark/light mode-->
     <include src="./partials/dark-light mode.html"></include>
 
     <!--Footer-->
 
     <include src="./partials/footer.html"></include>
-
+    <div class="sroll-btn-container">
+      <button type="button" class="scroll-btn" id="scrollToTopBtn">
+        <svg class="scroll-btn__icon">
+          <use href="./images/icomoon2/symbol-defs.svg#icon-eject"></use>
+        </svg>
+      </button>
+    </div>
     <!-- main script -->
     <script src="./js-files/modalWindw.js" type="module"></script>
   </body>
