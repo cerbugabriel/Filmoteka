@@ -1,6 +1,6 @@
 .container {
   width: 480px; //cod David
-  //width: 100vw; //cod eu
+  //width: 100vw; //cod Ioana
   max-width: 100%;
   margin: 0 auto;
 }
@@ -24,14 +24,14 @@
     display: flex;
     flex-direction: column;
     padding: 14px 14px 20px 14px;
-    width: 100vw; //cod eu
+    width: 100vw; //cod Ioana
     //width: 100%;//cod david
     max-width: 280px; //cod david
     height: 460px;
     &--bar {
       padding-bottom: 312px;
-      width: 90%; //cod eu
-      // background-color: aqua; //cod eu
+      width: 90%; //cod Ioana
+      // background-color: aqua; //cod Ioana
       margin-left: 5%;
     }
     &__logo {
@@ -181,7 +181,7 @@
 @media (min-width: 768px) {
   .container {
     //width: 768px;//cod David
-    width: 1279;
+    width: 100%; // cod Ioana
   }
   ::placeholder {
     font-size: 14px;
@@ -217,7 +217,7 @@
       height: 222px;
       margin: 32px auto;
       //background-size: contain;//cod David
-      background-size: cover; //cod eu
+      background-size: cover; //cod Ioana
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 10px;
@@ -277,7 +277,7 @@
 @media (min-width: 1280px) {
   .container {
     //width: 1280px;//cod David
-    width: 100vw; //cod eu
+    width: 100vw; //cod Ioana
   }
   .header {
     &__title {
@@ -287,13 +287,13 @@
     &__container {
       background: url('/src/images/headerimages1280w.jpg');
       padding: 16px 0 32px 32px; //cod David
-      width: 100vw; //cod eu
+      width: 100vw; //cod Ioana
       //width: 100%;//cod David
       //max-width: 1216px; //cod David
-      max-width: 1600px;
+      max-width: 100%; //cod Ioana
       height: 316px;
       //background-size: contain;//cod David
-      background-size: cover; //cod eu
+      background-size: cover; //cod Ioana
       background-position: center;
       background-repeat: no-repeat;
       border-radius: 10px;
