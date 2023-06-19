@@ -64,6 +64,10 @@
   background-color: $grey-bg;
   font-weight: 900;
 }
+.darkmode .dot-btn {
+  color: #fff;
+  background-color: #2b2b2b;
+}
 
 @media screen and (min-width: 768px) {
   .pagination {

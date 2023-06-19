@@ -1,23 +1,30 @@
 .footer {
+  width: 100%;
   display: flex;
   justify-content: center;
-  flex-basis: 320px;
-  padding: 28px 42px;
+  padding: 28px 0;
 
-  border: 2px solid green;
-  &__inner {
+  &__container {
     display: flex;
-  }
-  &__pagination {
-    background-color: $white-color;
-    border: 2px solid red;
+    flex-direction: column;
+    flex: 0 1 320px;
+    border: 2px solid white;
   }
   &__text {
     color: #545454;
   }
 }
+
 .darkmode .footer__text {
   color: #fff;
+}
+.heart {
+  color: $brand-color !important;
+}
+.students-link {
+  text-decoration: underline;
+  color: #fff;
+  fill: currentColor;
 }
 @media screen and (min-width: 768px) {
   .footer {
