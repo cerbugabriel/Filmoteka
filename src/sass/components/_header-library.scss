@@ -3,6 +3,7 @@
     position: absolute;
     right: 5%;
   }
+
   &__btn {
     display: flex;
     flex-direction: row;
@@ -10,6 +11,7 @@
     gap: 4px;
     padding-bottom: 8px;
   }
+
   &__watched {
     &--item {
       font-weight: 500;
@@ -25,6 +27,7 @@
       position: relative;
       overflow: hidden;
       transition: box-shadow 0.3s ease-in-out;
+
       &::before {
         content: '';
         position: absolute;
@@ -34,19 +37,23 @@
         transition: transform 0.3s ease-in-out;
         z-index: -1;
       }
+
       &:hover {
         transform: scale(0.9);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
         &::before {
           transform: scale(1);
         }
       }
+
       &-link {
         color: $brand-color;
         transition: transform 0.3s ease-in-out;
       }
     }
   }
+
   &__queue {
     &--item {
       font-weight: 500;
@@ -62,6 +69,7 @@
       position: relative;
       overflow: hidden;
       transition: box-shadow 0.3s ease-in-out;
+
       &::before {
         content: '';
         position: absolute;
@@ -71,13 +79,16 @@
         transition: transform 0.3s ease-in-out;
         z-index: -1;
       }
+
       &:hover {
         transform: scale(0.9);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
         &::before {
           transform: scale(1);
         }
       }
+
       &-link {
         color: $brand-color;
         transition: transform 0.3s ease-in-out;
@@ -85,6 +96,43 @@
     }
   }
 }
+
+.btns-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  &__btn {
+    background-color: $white-color;
+    color: $brand-color;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 10px 23px;
+    border: 1px solid $white-color;
+    border-radius: 100px;
+
+    &:hover {
+      cursor: pointer;
+      color: $white-color;
+      background-color: #B92F2C;
+      border-color: #B92F2C;
+      box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
+      transform: scale(0.9);
+    }
+  }
+}
+
+.active-library {
+  color: $white-color;
+  background-color: #B92F2C;
+  border-color: #B92F2C;
+  box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15)
+}
+
 @media (min-width: 300px) and (max-width: 400px) {
   .header {
     &__library {
@@ -94,6 +142,7 @@
     }
   }
 }
+
 @media (min-width: 401px) and (max-width: 768px) {
   .header {
     &__library {
