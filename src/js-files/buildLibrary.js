@@ -20,12 +20,16 @@ const getStorageItem = item => {
 };
 
 export const buildsLibrary = async () => {
-  let selectedLibrary = toWatch;
-  let localStorageMovies = getStorageItem(selectedLibrary);
-  localStorageMovies = getIds(localStorageMovies);
-  const movies = await moviesDetails(localStorageMovies);
+  try {
+    let selectedLibrary = toWatch;
+    let localStorageMovies = getStorageItem(selectedLibrary);
+    localStorageMovies = getIds(localStorageMovies);
+    const movies = await moviesDetails(localStorageMovies);
 
-  console.log(movies);
+    console.log(movies);
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 const moviesDetails = async localStorageMovies => {
