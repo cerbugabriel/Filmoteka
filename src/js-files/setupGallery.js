@@ -1,8 +1,6 @@
 import getElement from './getElement';
 
-const moviesGallery = getElement('.gallery');
-
-export const setupGallery = (data, movieTypes) => {
+export const setupGallery = (data, movieTypes, moviesGallery) => {
   moviesGallery.innerHTML = '';
   const galleryContent = data
     .map(movie => {
