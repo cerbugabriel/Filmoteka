@@ -47,14 +47,6 @@ function galleryHandler(e) {
   const filmDescription = elementInfo.getAttribute('data-about');
   modalFilmDescription.innerHTML += ` ${filmDescription} `;
 
-  // btns
-  // let watchStorage = getStorageItem(toWatch);
-  // let queueStorage = getStorageItem(toQueue);
-
-  // console.log(watchBtn);
-  // adjunstWatchBtns(watchStorage, watchBtn, movieId);
-  // adjunstQueueBtns(queueStorage, queueBtnt, movieId);
-
   modal.showModal();
 }
 closeModal.addEventListener('click', () => {

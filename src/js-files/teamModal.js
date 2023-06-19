@@ -6,12 +6,12 @@ openteamModal.addEventListener('click', () => {
   modal.showModal();
 });
 
-// closeteamModal.addEventListener('click', () => {
-//   modal.close();
-// });
+closeteamModal.addEventListener('click', () => {
+  modal.close();
+});
 
-// window.onclick = e => {
-//   if (e.target == modal) {
-//     closeteamModal.close();
-//   }
-// };
+window.onclick = e => {
+  if (e.target == modal) {
+    closeteamModal.close();
+  }
+};
