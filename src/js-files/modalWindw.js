@@ -47,10 +47,6 @@ function galleryHandler(e) {
   const filmDescription = elementInfo.getAttribute('data-about');
   modalFilmDescription.innerHTML += ` ${filmDescription} `;
 
-  // add movie id to the modal
-  const modalContainer = getElement('.modal');
-  const movieId = element.dataset.id;
-  modalContainer.dataset.movieId = movieId;
   // btns
   let watchStorage = getStorageItem(toWatch);
   let queueStorage = getStorageItem(toQueue);
