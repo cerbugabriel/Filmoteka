@@ -69,7 +69,8 @@ function galleryHandler(e) {
   const modalContainer = getElement('.modal');
   const movieId = element.dataset.id;
   modalContainer.dataset.movieId = movieId;
-  // btns
+
+  // btns;
   let watchStorage = getStorageItem(toWatch);
   let queueStorage = getStorageItem(toQueue);
 
@@ -77,6 +78,11 @@ function galleryHandler(e) {
   adjunstWatchBtns(watchStorage, watchBtn, movieId);
   adjunstQueueBtns(queueStorage, queueBtnt, movieId);
 
+  // info despre functia showModal()
+  // The showModal() method of the HTMLDialogElement interface displays the dialog as a modal,
+  // over the top of any other dialogs that might be present.It displays in the top layer,
+  // along with a ::backdrop pseudo - element.
+  // Interaction outside the dialog is blocked and the content outside it is rendered inert.
   modal.showModal();
 }
 
