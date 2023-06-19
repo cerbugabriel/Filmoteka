@@ -104,4 +104,19 @@ window.onclick = e => {
   }
 };
 
+
 // team modal
+
+// Modal 2
+const teamModal = document.querySelector('.backdrop-modal');
+const openteamModal = document.querySelector('#modalWindow');
+const closeteamModal = document.querySelector('.close-modal-team');
+
+openteamModal.addEventListener('click', () => {
+  teamModal.showModal();
+});
+
+closeteamModal.addEventListener('click', () => {
+  teamModal.close();
+});
+
