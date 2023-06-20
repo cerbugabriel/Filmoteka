@@ -20,22 +20,30 @@ function galleryHandler(e) {
   const elementInfo = element.querySelector('.modal-info');
   const voteCount = elementInfo.getAttribute('data-vote-count');
   const average = elementInfo.getAttribute('data-vote-avg');
-  modalVotes.innerHTML = `Vote / Votes: ${average} / ${voteCount}`;
+  const averageCountNumber = Number(average);
+  const averageCountNumberRound = Math.round(averageCountNumber * 10) / 10;
+  modalVotes.innerHTML = `Vote / Votes: ${averageCountNumberRound} / ${voteCount}`;
+
   // add movie id to the modal
   const modalContainer = getElement('.modal');
   const movieId = element.dataset.id;
   modalContainer.dataset.movieId = movieId;
+
   //image work
   const movieImage = element.querySelector('img');
   const imageLink = movieImage.getAttribute('src');
   modalImageContainer.innerHTML = `<img src="${imageLink}">`;
+
   //film title
   const containerInfoTitle = element.querySelector('.container-info b');
   const filmName = containerInfoTitle.textContent;
   modalFilmName.innerHTML = ` ${filmName} `;
+
   //film popularity
   const filmPopularity = elementInfo.getAttribute('data-popularity');
-  modalFilmPopularity.innerHTML = `Popularity: ${filmPopularity} `;
+  const filmPopularityRound = Math.round(filmPopularity);
+  modalFilmPopularity.innerHTML = `Popularity: ${filmPopularityRound} `;
+
   //film original title
   const filmOriginalName = elementInfo.getAttribute('data_original_title');
   const originalTitle =
