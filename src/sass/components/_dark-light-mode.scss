@@ -1,6 +1,4 @@
 .dl-btn {
-  position: absolute;
-  bottom: 318px;
   background-color: #fff;
   width: 60px;
   height: 32px;
@@ -11,6 +9,9 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  position: absolute;
+  top: 443px;
+  left: 75%;
 
   &__indicator {
     background-color: #fff;
@@ -83,4 +84,16 @@ body.darkmode {
 .darkmode .fa-moon {
   color: #fff;
   fill: currentColor;
+}
+@media screen and (min-width: 768px) {
+  .dl-btn {
+    top: 200px;
+    left: 85%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .dl-btn {
+    top: 300px;
+    left: 85%;
+  }
 }
