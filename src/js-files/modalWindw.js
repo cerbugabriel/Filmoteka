@@ -49,11 +49,13 @@ function galleryHandler(e) {
   const originalTitle =
     filmOriginalName === 'undefined' ? filmName : filmOriginalName;
   modalOriginaFilmTitle.innerHTML = `Original-title: ${originalTitle} `;
+
   //film genre
   const containerInfo = element.querySelector('.container-info');
   const description = containerInfo.querySelector('.cont-descr');
   const genre = description.querySelector('p').textContent;
   modalFilmGenre.innerHTML = `Genre: ${genre}`;
+
   //about film
   const filmDescription = elementInfo.getAttribute('data-about');
   modalFilmDescription.innerHTML += ` ${filmDescription} `;
