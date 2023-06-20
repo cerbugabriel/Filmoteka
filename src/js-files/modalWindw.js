@@ -46,6 +46,7 @@ function galleryHandler(e) {
   //about film
   const filmDescription = elementInfo.getAttribute('data-about');
   modalFilmDescription.innerHTML += ` ${filmDescription} `;
+
   modal.showModal();
 }
 closeModal.addEventListener('click', () => {
@@ -58,3 +59,14 @@ function clearModalOnClose() {
     element.innerHTML = '';
   });
 }
+
+window.onclick = e => {
+  console.log(e.target);
+};
+
+window.onclick = e => {
+  if (e.target == modal) {
+    clearModalOnClose();
+    modal.close();
+  }
+};
