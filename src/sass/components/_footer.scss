@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     flex: 0 1 320px;
-    border: 2px solid white;
   }
   &__text {
     color: #545454;
@@ -28,18 +27,28 @@
   cursor: pointer;
 
   &:hover {
-    color: orange;
+    color: $brand-color;
   }
 }
+.rights-reserved {
+  margin: auto;
+}
+.developers {
+  margin: auto;
+}
 @media screen and (min-width: 768px) {
-  .footer {
-    flex-basis: 768px;
-    padding: 30px 143px;
+  .footer__container {
+    flex-direction: row;
+    flex: 0 1 768px;
+    padding: 30px 160px;
+  }
+  .developers {
+    margin-left: 0;
   }
 }
 @media screen and (min-width: 1280px) {
-  .pagination {
-    flex-basis: 1280px;
-    padding: 29px 399px;
+  .footer__container {
+    flex: 0 1 1200px;
+    padding: 29px 380px;
   }
 }
