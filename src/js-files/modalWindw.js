@@ -61,7 +61,7 @@ function clearModalOnClose() {
 }
 
 window.onclick = e => {
-  console.log(e.target);
+  modal.close();
 };
 
 window.onclick = e => {
