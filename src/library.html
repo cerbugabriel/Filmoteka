@@ -19,20 +19,23 @@
   </head>
   <body>
     <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <!--<include src="./partials/example.html"></include>-->
+    <!-- <include src="./partials/example.html"></include> -->
     <include src="./partials/header-library.html"></include>
 
     <!--dark mode-->
     <include src="./partials/dark-light mode.html"></include>
     <main>
+      <section class="library-gallery"></section>
       <section>
         <div class="no-movie">
           <!--la apasarea butoanelor trebuie adaugata clasa "is-hidden"-->
           <!--la stergerea filmelor din librarie trebuie adaugata clasa "is-visibile "-->
           <img
             class="images-watched"
-            srcset="images/movie-theater-4609877_640.jpg      640w,
-                     images/movie-theater-4609877_1280.jpg 1280w"
+            srcset="
+              images/movie-theater-4609877_640.jpg   640w,
+              images/movie-theater-4609877_1280.jpg 1280w
+            "
             src="images/movie-theater-4609877_1280.jpg"
             alt="digital video camera"
           />
@@ -55,10 +58,6 @@
         </div>-->
       </section>
     </main>
-    <footer>
-      <div class="'inner-container">
-        <p>text all reserved...</p>
-      </div>
-    </footer>
+    <include src="./partials/footer.html"></include>
   </body>
 </html>

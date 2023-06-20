@@ -1,5 +1,4 @@
 .pagination {
-  border: 2px solid blue;
   display: flex;
   justify-content: center;
   margin: 60px 0;
@@ -7,9 +6,9 @@
   &__container {
     display: flex;
     justify-content: center;
-    flex-basis: 320px;
+    flex: 0 1 320px;
     padding: 0 20px;
-    border: 2px solid pink;
+
     gap: $gap;
   }
 
