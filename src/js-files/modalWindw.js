@@ -47,14 +47,6 @@ function galleryHandler(e) {
   const filmDescription = elementInfo.getAttribute('data-about');
   modalFilmDescription.innerHTML += ` ${filmDescription} `;
 
-  // btns
-  let watchStorage = getStorageItem(toWatch);
-  let queueStorage = getStorageItem(toQueue);
-
-  console.log(watchBtn);
-  adjunstWatchBtns(watchStorage, watchBtn, movieId);
-  adjunstQueueBtns(queueStorage, queueBtnt, movieId);
-
   modal.showModal();
 }
 closeModal.addEventListener('click', () => {
@@ -78,16 +70,3 @@ window.onclick = e => {
     modal.close();
   }
 };
-
-// Modal 2
-const teamModal = document.querySelector('.backdrop-modal');
-const openteamModal = document.querySelector('#modalWindow');
-const closeteamModal = document.querySelector('.close-modal-team');
-
-openteamModal.addEventListener('click', () => {
-  teamModal.showModal();
-});
-
-closeteamModal.addEventListener('click', () => {
-  teamModal.close();
-});

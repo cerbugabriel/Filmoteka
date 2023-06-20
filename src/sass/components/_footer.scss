@@ -25,6 +25,11 @@
   text-decoration: underline;
   color: #fff;
   fill: currentColor;
+  cursor: pointer;
+
+  &:hover {
+    color: orange;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer {

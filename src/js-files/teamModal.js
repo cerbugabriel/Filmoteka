@@ -7,11 +7,11 @@ openteamModal.addEventListener('click', () => {
 });
 
 closeteamModal.addEventListener('click', () => {
-  teamModal.close();
+  modal.close();
 });
 
 window.onclick = e => {
   if (e.target == modal) {
-    teamModal.close();
+    closeteamModal.close();
   }
 };
