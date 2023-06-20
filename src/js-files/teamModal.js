@@ -12,6 +12,6 @@ closeteamModal.addEventListener('click', () => {
 
 window.onclick = e => {
   if (e.target == modal) {
-    closeteamModal.close();
+    modal.close();
   }
 };

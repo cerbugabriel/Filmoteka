@@ -35,6 +35,8 @@ const body = document.querySelector('body');
 const dlBtn = document.querySelector('.dl-btn');
 const iconSun = document.querySelector('.fa-sun');
 const iconMoon = document.querySelector('.fa-moon');
+const modal = document.querySelector('.modal');
+const modalTeam = document.querySelector('.team__modal');
 
 function store(value) {
   localStorage.setItem('darkmode', value);
@@ -62,6 +64,8 @@ dlBtn.addEventListener('click', () => {
   body.classList.toggle('darkmode');
   iconSun.classList.add('animated');
   iconMoon.classList.add('animated');
+  modal.classList.toggle('darkmode');
+  modalTeam.classList.toggle('darkmode');
 
   store(body.classList.contains('darkmode'));
 

@@ -1,4 +1,5 @@
 import getElement from './getElement';
+
 const modal = getElement('#film_info_modal');
 const modalImageContainer = getElement('.img_content');
 const modalVotes = getElement('.film-detail_votes');
@@ -9,7 +10,9 @@ const modalFilmGenre = getElement('.film-detail_genre');
 const modalFilmDescription = getElement('.film-detail_description');
 const closeModal = getElement('#close-button');
 const gallery = getElement('.gallery');
+
 gallery.addEventListener('click', galleryHandler);
+
 function galleryHandler(e) {
   const element = e.target.parentNode;
 
@@ -54,19 +57,17 @@ closeModal.addEventListener('click', () => {
   modal.close();
 });
 function clearModalOnClose() {
+  console.log(window.target);
   const modalDataElements = modal.querySelectorAll('[class*="film-detail"]');
   modalDataElements.forEach(element => {
     element.innerHTML = '';
   });
 }
 
-window.onclick = e => {
-  console.log(e.target);
-};
-
-window.onclick = e => {
+// function to close modal by  outside click
+window.addEventListener('click', e => {
   if (e.target == modal) {
     clearModalOnClose();
     modal.close();
   }
-};
+});
