@@ -12,6 +12,7 @@ const gallery = getElement('.gallery');
 gallery.addEventListener('click', galleryHandler);
 function galleryHandler(e) {
   const element = e.target.parentNode;
+
   //average work
   const elementInfo = element.querySelector('.modal-info');
   const voteCount = elementInfo.getAttribute('data-vote-count');
@@ -45,6 +46,7 @@ function galleryHandler(e) {
   //about film
   const filmDescription = elementInfo.getAttribute('data-about');
   modalFilmDescription.innerHTML += ` ${filmDescription} `;
+
   modal.showModal();
 }
 closeModal.addEventListener('click', () => {
@@ -57,3 +59,14 @@ function clearModalOnClose() {
     element.innerHTML = '';
   });
 }
+
+window.onclick = e => {
+  console.log(e.target);
+};
+
+window.onclick = e => {
+  if (e.target == modal) {
+    clearModalOnClose();
+    modal.close();
+  }
+};
