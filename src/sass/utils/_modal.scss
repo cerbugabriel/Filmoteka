@@ -184,7 +184,7 @@
   width: 20px;
   cursor: pointer;
   float: right;
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   opacity: 0.7;
   margin-top: -17px;
@@ -202,13 +202,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+
   gap: 10px;
 }
 
 @media screen and (max-width: 767px) {
   .buttons {
     flex-direction: column;
+    margin: auto;
   }
 }
 
@@ -280,4 +281,28 @@ dialog::backdrop {
   filter: blur(8px);
   -webkit-filter: blur(4px);
   backdrop-filter: sepia(50%);
+}
+
+body.darkmode .modal {
+  background-color: #1e2229;
+}
+
+body.darkmode .film-detail_description,
+body.darkmode .about,
+body.darkmode .film_title,
+body.darkmode.close-button {
+  color: #fff;
+  fill: #fff;
+}
+
+body.darkmode .add-to-watch {
+  background-color: #1e2229;
+}
+
+.close-btn {
+  fill: lightgray;
+}
+
+body.darkmode .group {
+  color: lightgray;
 }
