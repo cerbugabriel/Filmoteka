@@ -4,7 +4,7 @@ import { handlePagination } from './js-files/utils';
 import { fetchPopularMovies } from './js-files/carousel';
 import { addToLocalStorag } from './js-files/locatStorage';
 import { handleModalBtns } from './js-files/handle-modal-btns';
-import { fetchPopularMovieTrailer } from './js-files/library/fetchTrailerMovie';
+import { fetchPopularMovieTrailer } from './js-files/fetchTrailerMovie';
 fetchPopularMovieTrailer()
   .then(youtubeUrl => {
     const container = document.querySelector('.video-frame');
