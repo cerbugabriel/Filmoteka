@@ -34,6 +34,7 @@
   transform: translate(-50%, -50%);
   background-color: $grey-bg;
   overflow-y: auto;
+  border-radius: 30px;
 }
 
 .team-close-modal {
@@ -45,6 +46,7 @@
   font-size: 25px;
   border: none;
   background: none;
+  cursor: pointer;
 }
 .team__title {
   margin-top: 13px;
@@ -138,7 +140,7 @@
   font-size: 15px;
   font-weight: 600;
   color: $color;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 
   &:hover,
   &:focus {
@@ -159,6 +161,7 @@
   font-size: 14px;
   font-weight: 500;
   color: gray;
+  transition-duration: 0.3s;
   &:hover,
   &:focus {
     color: $brand-color;
@@ -176,4 +179,19 @@
 .team__member:hover .team__name,
 .team__member:hover .team__role {
   color: $brand-color;
+}
+
+body.darkmode .team-close-modal,
+body.darkmode .team__name,
+body.darkmode .team__title {
+  color: #fff;
+  fill: #fff;
+}
+
+body.darkmode .team__role {
+  color: lightgray;
+}
+
+body.darkmode .team__modal {
+  background-color: #343b48;
 }
