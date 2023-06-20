@@ -1,4 +1,4 @@
-import { API_KEY, BASE_URL } from '../utils';
+import { API_KEY, BASE_URL } from './utils';
 
 export async function fetchPopularMovieTrailer() {
   try {
@@ -8,7 +8,6 @@ export async function fetchPopularMovieTrailer() {
     const data = await response.json();
 
     const mostPopularMovie = data.results.find(movie => movie.vote_count > 0);
-    votes;
 
     const videoResponse = await fetch(
       `https://api.themoviedb.org/3/movie/${mostPopularMovie.id}/videos?api_key=${API_KEY}`
@@ -17,7 +16,7 @@ export async function fetchPopularMovieTrailer() {
 
     const trailerVideo = videoData.results.find(
       video => video.type === 'Trailer'
-    );
+    ); // Find the first trailer video
 
     if (trailerVideo) {
       const videoKey = trailerVideo.key;

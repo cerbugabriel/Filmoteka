@@ -13,7 +13,9 @@
   top: 445px;
   left: 75%;
 
-  &indicator {
+
+
+  &__indicator {
     background-color: #fff;
     width: 28px;
     height: 28px;
@@ -23,7 +25,8 @@
     transition: transform 0.3s ease;
   }
 
-  &icon-container {
+
+  &__icon-container {
     width: 100%;
     height: 100%;
     display: flex;
