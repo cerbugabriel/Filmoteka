@@ -197,3 +197,13 @@ body.darkmode .team__modal {
 #request_button:hover {
   color: $brand-color;
 }
+
+body.darkmode .team__title {
+  color: #fff;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+    text-decoration: underline 0.1em $white-color;
+    text-underline-offset: 0.4em;
+  }
+}
