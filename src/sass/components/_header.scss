@@ -1,7 +1,6 @@
 .container {
-  width: 480px; //cod David
-  //width: 100vw; //cod eu
-  max-width: 100%;
+  max-width: 480px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -12,7 +11,19 @@
     line-height: 38px;
     align-items: center;
     text-align: center;
-    margin-left: 10px;
+  }
+
+  &__menu {
+    padding: 0;
+    &__list {
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      gap: 4px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
   }
   &__container {
     margin: 20px auto;
@@ -20,19 +31,15 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     padding: 14px 14px 20px 14px;
-    //width: 100vw; //cod eu
-    //width: 100%;//cod david
-    max-width: 280px; //cod david
+    width: 100%;
+    max-width: 280px;
     height: 460px;
     &--bar {
-      padding-bottom: 312px;
-      width: 90%; //cod eu
-      // background-color: aqua; //cod eu
-      margin-left: 5%;
+      padding-bottom: 285px;
     }
     &__logo {
       display: flex;
@@ -40,23 +47,28 @@
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
+      flex-grow: 1;
       &--link {
+        color: white;
+        gap: 8px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        gap: 8px;
-        color: #fff;
-        fill: currentColor;
-        &--icon {
-          display: flex;
-          position: relative;
-          overflow: hidden;
+      }
+      &--icon {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        width: 32px;
+        height: 32px;
+        &-svg {
+          width: 32px;
+          height: 32px;
+          fill: none;
+          position: absolute;
           animation: filmSvg 2s infinite;
           transform: rotateY(40deg);
-          &-svg {
-            width: 50px;
-            height: 80px;
-          }
+          fill: white;
         }
       }
     }
@@ -67,104 +79,36 @@
     flex-wrap: nowrap;
     gap: 4px;
     padding-bottom: 8px;
-    &--item {
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 14px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      text-transform: uppercase;
-      background-color: white;
+    &--named {
       border-radius: 100px;
-      padding: 10px 26px;
-      position: relative;
-      overflow: hidden;
-      transition: box-shadow 0.3s ease-in-out;
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
+      .header__navigation__menu__item--link {
+        background-color: black;
+        color: white;
       }
-      &:hover {
-        transform: scale(0.9);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-        &::before {
-          transform: scale(1);
-        }
-      }
-      &-link {
-        color: #000000;
-        transition: transform 0.3s ease-in-out;
-      }
-      &.header__navigation__menu--selected {
-        background-color: #000000;
-        a {
-          color: #ffffff;
-        }
+      .header__menu__list__item--link {
+        background-color: black;
+        color: white;
       }
     }
-  }
-  &__search {
-    position: relative;
-    input {
-      height: 34px;
-      margin: 0 auto;
-      border-radius: 100px;
-      padding: 10px 0 10px 14px;
-      background-color: #ffffff;
-      border: none;
-      width: 100%;
-      transition: border-color 0.5s ease-out;
-      &:focus {
-        border: 2px solid red;
-        outline: none;
-        color: #902221;
-      }
-    }
-    button {
-      position: absolute;
-      background-color: transparent;
-      right: 14px;
-      bottom: 0;
-      padding: 0;
-      margin: 0 auto;
-      border: none;
-      cursor: pointer;
-      &:hover .header__search__container--icon {
-        width: 20px;
-        height: 20px;
-      }
-    }
-    &__container {
-      position: relative;
-      &--icon {
-        width: 18px;
-        height: 18px;
-        fill: #ffffff;
-        stroke: #000000;
-        position: absolute;
-        left: -15px;
-        top: -16px;
-      }
-      &--error {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        font-size: 10px;
-        line-height: 12px;
-        display: flex;
+    &__item {
+      &--link {
         align-items: center;
-        color: #ffffff;
-        padding: 8px 0 8px 15px;
-        width: 180px;
+        text-align: center;
+        color: black;
+        padding: 10px 26px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+        display: flex;
+        text-transform: uppercase;
+        background-color: white;
+        border-radius: 100px;
+        position: relative;
+        overflow: hidden;
       }
     }
   }
 }
-
 @media screen and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
@@ -173,11 +117,9 @@
     background-size: cover;
   }
 }
-
 @media (min-width: 768px) {
   .container {
-    //width: 768px;//cod David
-    width: 1279;
+    max-width: 768px;
   }
   ::placeholder {
     font-size: 14px;
@@ -195,69 +137,60 @@
         bottom: -2px;
         width: 100%;
         height: 4px;
-        background: linear-gradient(to right, hsl(359, 92%, 48%), transparent);
-        transform-origin: left;
-        transform: scaleX(0);
-        transition: transform 0.5s ease-in-out;
-      }
-      &:hover::after {
-        transform: scaleX(1);
       }
     }
     &__container {
       background: url('../images/background768w.png');
-      padding: 16px;
-      //width: 100%;//cod David
-      width: 100vw;
-      max-width: 1200px;
-      height: 222px;
-      margin: 32px auto;
-      //background-size: contain;//cod David
-      background-size: cover; //cod eu
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      border-radius: 10px;
+      border-radius: 15px;
+      padding: 16px;
+      width: 100%;
+      max-width: 704px;
+      height: 222px;
+      margin: 32px auto;
       &--bar {
         display: flex;
         flex-direction: row-reverse;
-        overflow: auto;
-        padding-bottom: 105px;
         justify-content: flex-end;
+        align-items: center;
         gap: 8px;
+        padding: 0;
+        order: 1;
+        margin-right: auto;
+        position: absolute;
+        flex-grow: 1;
       }
       &__logo {
         justify-content: flex-start;
+        align-items: flex-end;
+        order: 3;
         &--icon {
           width: 40px;
           height: 40px;
           &-svg {
             width: 40px;
             height: 40px;
-            animation: filmSvg 4s infinite;
           }
         }
       }
     }
-    &__navigation__menu--item {
-      padding: 12px 24px;
-      a {
-        color: #000000;
+    &__navigation__menu {
+      padding-bottom: 0;
+      &--item {
+        padding: 12px 24px;
+        a {
+          color: black;
+        }
       }
     }
-    &__search {
-      input {
-        height: 38px;
-        width: 165px;
-        padding: 11px 0 11px 14px;
-      }
-      button {
-        right: 11px;
-      }
-      &__container {
-        &--error {
-          width: 165px;
-          padding: 10px 0 10px 15px;
-        }
+    &__menu {
+      order: 2;
+      margin-left: auto;
+      position: relative;
+      &__list {
+        justify-content: flex-end;
       }
     }
   }
@@ -270,11 +203,9 @@
     }
   }
 }
-
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .container {
-    //width: 1280px;//cod David
-    width: 100vw; //cod eu
+    max-width: 1200px;
   }
   .header {
     &__title {
@@ -283,48 +214,25 @@
     }
     &__container {
       background: url('../images/headerimages1280w.jpg');
-      padding: 16px 0 32px 32px; //cod David
-      width: 100vw; //cod eu
-      //width: 100%;//cod David
-      //max-width: 1216px; //cod David
-      max-width: 1600px;
+      padding: 16px 32px 32px 32px;
+      width: 100%;
+      max-width: 1216px;
       height: 316px;
-      //background-size: contain;//cod David
-      background-size: cover; //cod eu
+      background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
-      border-radius: 10px;
-      &--bar {
-        padding-bottom: 151px;
-      }
+      border-radius: 15px;
       &__logo--icon {
         width: 59px;
         height: 59px;
-        color: #ffffff;
         &-svg {
           width: 59px;
           height: 59px;
-          color: #ffffff;
         }
       }
     }
     &__navigation__menu--item {
       padding: 12px 24px;
-    }
-    &__search {
-      input {
-        height: 42px;
-        padding: 13px 0 13px 16px;
-      }
-      button {
-        right: 11px;
-      }
-      &__container {
-        &--error {
-          padding: 10px 0 10px 15px;
-          width: 185px;
-        }
-      }
     }
   }
   @media screen and (min-device-pixel-ratio: 2),
@@ -366,5 +274,98 @@
   }
   100% {
     background-position: 100% 50%;
+  }
+}
+
+.header {
+  &__search {
+    position: relative;
+    input {
+      height: 34px;
+      margin: 0 auto;
+      border-radius: 100px;
+      padding: 10px 0 10px 14px;
+      background-color: white;
+      border: none;
+      width: 100%;
+      &:focus {
+        border: 2px solid red;
+        outline: none;
+      }
+    }
+    button {
+      position: absolute;
+      background-color: transparent;
+      right: 14px;
+      bottom: 0;
+      padding: 0;
+      margin: 0 auto;
+      border: none;
+      cursor: pointer;
+      &:hover .header__search__container--icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &__container {
+      position: relative;
+      &--icon {
+        width: 16px;
+        height: 16px;
+        fill: white;
+        stroke: black;
+      }
+      &--error {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        font-size: 10px;
+        line-height: 12px;
+        display: flex;
+        align-items: center;
+        color: white;
+        padding: 8px 0 8px 15px;
+        width: 180px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .header {
+    &__search {
+      input {
+        height: 38px;
+        width: 165px;
+        padding: 11px 0 11px 14px;
+      }
+      button {
+        right: 11px;
+      }
+      &__container {
+        &--error {
+          padding: 10px 0 10px 15px;
+          width: 165px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1280px) {
+  .header {
+    &__search {
+      input {
+        height: 42px;
+        padding: 13px 0 13px 16px;
+      }
+      button {
+        right: 11px;
+      }
+      &__container {
+        &--error {
+          padding: 10px 0 10px 15px;
+          width: 185px;
+        }
+      }
+    }
   }
 }
