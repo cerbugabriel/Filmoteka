@@ -27,29 +27,27 @@ body {
   display: flex;
 }
 
-// .library-film_info_modal {
-//   background-color: white;
-//   border: none;
-//   position: fixed;
+.library-film_info_modal {
+  background-color: white;
+  border: none;
+  position: fixed;
 
-//   flex-direction: row;
-//   justify-content: center;
+  flex-direction: row;
+  justify-content: center;
 
-//   margin: auto auto;
-//   padding: 60px;
+  margin: auto auto;
+  padding: 60px;
 
-//   z-index: 999;
+  z-index: 999;
 
-//   justify-content: center;
-//   align-items: center;
-//   display: none;
+  justify-content: center;
+  align-items: center;
+  display: none;
 
-//   overflow: hidden;
-//   display: flex;
-//   .modal {
-//     position: absolute;
-//   }
-// }
+  overflow: hidden;
+  display: flex;
+
+}
 
 .content {
   display: flex;
