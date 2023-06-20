@@ -22,13 +22,16 @@
 }
 .students-link {
   text-decoration: underline;
-  color: #fff;
+  color: #545454;
   fill: currentColor;
   cursor: pointer;
 
   &:hover {
     color: $brand-color;
   }
+}
+.darkmode .students-link {
+  color: #fff;
 }
 .rights-reserved {
   margin: auto;
