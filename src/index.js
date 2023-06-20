@@ -4,6 +4,22 @@ import { handlePagination } from './js-files/utils';
 import { fetchPopularMovies } from './js-files/carousel';
 import { addToLocalStorag } from './js-files/locatStorage';
 import { handleModalBtns } from './js-files/handle-modal-btns';
+import { fetchPopularMovieTrailer } from './js-files/library/fetchTrailerMovie';
+fetchPopularMovieTrailer()
+  .then(youtubeUrl => {
+    const container = document.querySelector('.video-frame');
+
+    const iframe = document.createElement('iframe');
+    iframe.src = youtubeUrl;
+    iframe.width = '100%';
+    iframe.height = '100%';
+    iframe.allowFullscreen = true;
+
+    container.appendChild(iframe);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 
 const init = async () => {
   fetchPopularMovies();
