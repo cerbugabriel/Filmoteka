@@ -20,13 +20,11 @@
   max-height: 558px;
 }
 
-
 .modal {
   background-color: #fff;
   margin: 0 auto;
   position: relative;
   padding: 40px 12px;
-
   width: 100%;
   max-width: 806px;
   height: 100%;
@@ -65,7 +63,6 @@
     margin: 0;
   }
 }
-
 .content::-webkit-scrollbar {
   width: 5px;
 }
@@ -187,7 +184,7 @@
   width: 20px;
   cursor: pointer;
   float: right;
-  background-color: #fff;
+  background-color: transparent;
   border: none;
   opacity: 0.7;
   margin-top: -17px;
@@ -205,13 +202,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+
   gap: 10px;
 }
 
 @media screen and (max-width: 767px) {
   .buttons {
     flex-direction: column;
+    margin: auto;
   }
 }
 
@@ -230,50 +228,6 @@
     transform: scale(1.1);
     background-color: #d41443;
     color: $white-color;
-  }
-}
-
-@media screen and (min-width: 420px) and (max-width: 600px) {
-  .film_info_modal {
-    width: 100%;
-    height: 55%;
-    overflow-y: scroll;
-  }
-
-  .img_content {
-    width: 240px;
-    height: 350px;
-    max-width: 100%;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .add-to-watch {
-    width: 198px;
-    height: 45px;
-  }
-
-  .info_content {
-    margin-top: 130px;
-    margin-bottom: 20px;
-  }
-
-  .film-detail_description {
-    margin-top: 10px;
-  }
-
-  .film_about {
-    margin: 20px 0px 10px 0px;
   }
 }
 
@@ -329,6 +283,26 @@ dialog::backdrop {
   backdrop-filter: sepia(50%);
 }
 
-.library-modal-show {
-  display: flex;
+body.darkmode .modal {
+  background-color: #1e2229;
+}
+
+body.darkmode .film-detail_description,
+body.darkmode .about,
+body.darkmode .film_title,
+body.darkmode.close-button {
+  color: #fff;
+  fill: #fff;
+}
+
+body.darkmode .add-to-watch {
+  background-color: #1e2229;
+}
+
+.close-btn {
+  fill: lightgray;
+}
+
+body.darkmode .group {
+  color: lightgray;
 }
