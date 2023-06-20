@@ -34,7 +34,7 @@ export const libraryLocalStorageHandle = () => {
     } else if (clickedElement.dataset.action === 'toWatchRmv') {
       watchStorage = watchStorage.filter(movie => movie.id !== id);
       setStorageItem(toWatch, watchStorage);
-      clickedElement.textContent = 'TO WATCHED';
+      clickedElement.textContent = 'ADD TO WATCHED';
       clickedElement.dataset.action = 'toWatch';
     } else if (clickedElement.dataset.action === 'toQueueRmv') {
       queueStorage = queueStorage.filter(movie => movie.id !== id);

@@ -15,7 +15,7 @@ const adjunstWatchBtns = (watchStorage, watchBtn, id) => {
   }
   if (watchBtn.dataset.action === 'toWatchRmv') {
     if (!watchedIds.includes(id)) {
-      watchBtn.textContent = 'TO WATCHED';
+      watchBtn.textContent = 'ADD TO WATCHED';
       watchBtn.dataset.action = 'toWatch';
     }
   }
