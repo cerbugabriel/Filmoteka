@@ -1,4 +1,4 @@
-import { API_KEY, BASE_URL } from '../utils';
+import { API_KEY, BASE_URL } from './utils';
 
 export async function fetchPopularMovieTrailer() {
   try {
