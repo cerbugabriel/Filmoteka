@@ -5,6 +5,7 @@
 body {
   background-color: 'currentColor';
 }
+
 .film_info_modal {
   background-color: white;
   border: none;
@@ -25,6 +26,31 @@ body {
   overflow: hidden;
   display: flex;
 }
+
+// .library-film_info_modal {
+//   background-color: white;
+//   border: none;
+//   position: fixed;
+
+//   flex-direction: row;
+//   justify-content: center;
+
+//   margin: auto auto;
+//   padding: 60px;
+
+//   z-index: 999;
+
+//   justify-content: center;
+//   align-items: center;
+//   display: none;
+
+//   overflow: hidden;
+//   display: flex;
+//   .modal {
+//     position: absolute;
+//   }
+// }
+
 .content {
   display: flex;
   gap: $gap * 2;
@@ -39,6 +65,7 @@ body {
   margin: 0 auto;
   padding: 40px 12px;
 }
+
 img {
   width: 375px;
   height: 478px;
@@ -93,11 +120,13 @@ img {
     height: 55%;
     overflow-y: scroll;
   }
+
   .img_content {
     width: 240px;
     height: 350px;
     max-width: 100%;
   }
+
   .content {
     display: flex;
     flex-direction: column;
@@ -114,13 +143,16 @@ img {
     width: 198px;
     height: 45px;
   }
+
   .info_content {
     margin-top: 130px;
     margin-bottom: 20px;
   }
+
   .film-detail_description {
     margin-top: 10px;
   }
+
   .film_about {
     margin: 20px 0px 10px 0px;
   }
@@ -201,4 +233,8 @@ dialog::backdrop {
   filter: blur(8px);
   -webkit-filter: blur(4px);
   backdrop-filter: sepia(50%);
+}
+
+.library-modal-show {
+  display: flex;
 }

@@ -8,7 +8,6 @@ export const createLibraryDOM = moviesArr => {
     .map(movie => {
       let {
         genres: movieType,
-        homepage,
         original_title: name,
         poster_path: movieImg,
         id,
@@ -29,9 +28,7 @@ export const createLibraryDOM = moviesArr => {
         data_original_title="${movie.original_title}"
         >
       </div>
-      <a href="${homepage}" target="_blank">
     <img src="${movieImg}" class="image" alt="${name}" />
-      </a>
   <div class="container-info">
     <b class="title">${name}</b>
     <div class="cont-descr">
