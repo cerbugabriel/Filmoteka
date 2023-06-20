@@ -1,7 +1,8 @@
 .header {
   &__library {
     position: absolute;
-    right: 5%;
+    //right: 5%;
+    right: -916px;
   }
 
   &__btn {
@@ -118,8 +119,8 @@
     &:hover {
       cursor: pointer;
       color: $white-color;
-      background-color: #B92F2C;
-      border-color: #B92F2C;
+      background-color: #b92f2c;
+      border-color: #b92f2c;
       box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
       transform: scale(0.9);
     }
@@ -128,27 +129,25 @@
 
 .active-library {
   color: $white-color;
-  background-color: #B92F2C;
-  border-color: #B92F2C;
-  box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15)
+  background-color: #b92f2c;
+  border-color: #b92f2c;
+  box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
 }
 
-@media (min-width: 300px) and (max-width: 400px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   .header {
     &__library {
-      left: 15vw;
-      right: 15vw;
-      top: 58%;
+      right: -462px;
     }
   }
 }
 
-@media (min-width: 401px) and (max-width: 768px) {
+@media (max-width: 768px) {
   .header {
     &__library {
       left: 33vw;
       right: 15vw;
-      top: 58%;
+      top: 48%;
     }
   }
 }
