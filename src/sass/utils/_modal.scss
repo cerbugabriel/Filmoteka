@@ -20,11 +20,13 @@
   max-height: 558px;
 }
 
+
 .modal {
   background-color: #fff;
   margin: 0 auto;
   position: relative;
   padding: 40px 12px;
+
   width: 100%;
   max-width: 806px;
   height: 100%;
@@ -63,6 +65,7 @@
     margin: 0;
   }
 }
+
 .content::-webkit-scrollbar {
   width: 5px;
 }
@@ -230,6 +233,50 @@
   }
 }
 
+@media screen and (min-width: 420px) and (max-width: 600px) {
+  .film_info_modal {
+    width: 100%;
+    height: 55%;
+    overflow-y: scroll;
+  }
+
+  .img_content {
+    width: 240px;
+    height: 350px;
+    max-width: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-to-watch {
+    width: 198px;
+    height: 45px;
+  }
+
+  .info_content {
+    margin-top: 130px;
+    margin-bottom: 20px;
+  }
+
+  .film-detail_description {
+    margin-top: 10px;
+  }
+
+  .film_about {
+    margin: 20px 0px 10px 0px;
+  }
+}
+
 .film_title {
   font-family: 'Roboto' sans-serif;
   font-style: normal;
@@ -280,4 +327,8 @@ dialog::backdrop {
   filter: blur(8px);
   -webkit-filter: blur(4px);
   backdrop-filter: sepia(50%);
+}
+
+.library-modal-show {
+  display: flex;
 }

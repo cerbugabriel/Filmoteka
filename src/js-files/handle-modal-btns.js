@@ -1,5 +1,4 @@
 // imports
-import _, { get } from 'lodash';
 import getElement from './getElement';
 import {
   getStorageItem,
@@ -14,7 +13,6 @@ const gallery = getElement('.gallery');
 
 const galleryClick = e => {
   const card = e.target.parentNode;
-  console.log(modal);
   const watchBtn = modal.querySelector('.watch');
   const queueBtn = modal.querySelector('.queue');
   const id = card.dataset.id;
