@@ -5,6 +5,7 @@ import { getElement } from './library-utils';
 const modal = getElement('.library-film_info_modal');
 const modalImageContainer = getElement('.img_content');
 const modalVotes = getElement('.film-detail_votes');
+const modalVotes2 = getElement('.film-detail_votes2');
 const modalFilmName = getElement('.film_title');
 const modalFilmPopularity = getElement('.film-detail_popularity');
 const modalOriginaFilmTitle = getElement('.film-detail_original-title');
@@ -21,7 +22,11 @@ export const libraryModal = () => {
     const elementInfo = element.querySelector('.modal-info');
     const voteCount = elementInfo.getAttribute('data-vote-count');
     const average = elementInfo.getAttribute('data-vote-avg');
-    modalVotes.innerHTML = `Vote / Votes: ${average} / ${voteCount}`;
+    const averageCountNumber = Number(average);
+    const averageCountNumberRound = Math.round(averageCountNumber * 10) / 10;
+    modalVotes.innerHTML = ` ${averageCountNumberRound} `;
+    modalVotes2.innerHTML = ` / ${voteCount}`;
+
     // add movie id to the modal
     const modalContainer = getElement('.modal');
     const movieId = element.dataset.id;
@@ -36,7 +41,8 @@ export const libraryModal = () => {
     modalFilmName.innerHTML = ` ${filmName} `;
     //film popularity
     const filmPopularity = elementInfo.getAttribute('data-popularity');
-    modalFilmPopularity.innerHTML = `Popularity: ${filmPopularity} `;
+    const filmPopularityRound = Math.round(filmPopularity);
+    modalFilmPopularity.innerHTML = `Popularity: ${filmPopularityRound} `;
     //film original title
     const filmOriginalName = elementInfo.getAttribute('data_original_title');
     const originalTitle =

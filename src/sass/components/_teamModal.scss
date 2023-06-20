@@ -193,3 +193,7 @@ body.darkmode .team__role {
 body.darkmode .team__modal {
   background-color: #343b48;
 }
+
+#request_button:hover {
+  color: $brand-color;
+}

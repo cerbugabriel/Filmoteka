@@ -3,6 +3,7 @@ import getElement from './getElement';
 const modal = getElement('#film_info_modal');
 const modalImageContainer = getElement('.img_content');
 const modalVotes = getElement('.film-detail_votes');
+const modalVotes2 = getElement('.film-detail_votes2');
 const modalFilmName = getElement('.film_title');
 const modalFilmPopularity = getElement('.film-detail_popularity');
 const modalOriginaFilmTitle = getElement('.film-detail_original-title');
@@ -22,7 +23,8 @@ function galleryHandler(e) {
   const average = elementInfo.getAttribute('data-vote-avg');
   const averageCountNumber = Number(average);
   const averageCountNumberRound = Math.round(averageCountNumber * 10) / 10;
-  modalVotes.innerHTML = `Vote / Votes: ${averageCountNumberRound} / ${voteCount}`;
+  modalVotes.innerHTML = ` ${averageCountNumberRound} `;
+  modalVotes2.innerHTML = ` / ${voteCount}`;
 
   // add movie id to the modal
   const modalContainer = getElement('.modal');
