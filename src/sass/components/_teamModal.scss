@@ -32,7 +32,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fcf8f8;
+  background-color: $grey-bg;
   overflow-y: auto;
 }
 
@@ -48,8 +48,8 @@
 }
 .team__title {
   margin-top: 13px;
-  color: black;
-  font-family: 'Roboto';
+  color: $color;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 23px;
@@ -62,7 +62,7 @@
   &:hover,
   &:focus {
     transform: scale(1.05);
-    text-decoration: underline 0.1em rgba(0, 0, 0, 1);
+    text-decoration: underline 0.1em $color;
     text-underline-offset: 0.4em;
   }
 
@@ -103,7 +103,7 @@
   &:hover,
   &:focus {
     transform: scale(1.05);
-    color: #ff0c08;
+    color: $brand-color;
   }
 
   @media screen and (min-width: 768px) {
@@ -142,7 +142,7 @@
 
   &:hover,
   &:focus {
-    color: #ff0c08;
+    color: $brand-color;
   }
 
   @media screen and (min-width: 768px) {
@@ -161,7 +161,7 @@
   color: gray;
   &:hover,
   &:focus {
-    color: #ff0c08;
+    color: $brand-color;
   }
 
   @media screen and (min-width: 1280px) {
@@ -175,5 +175,5 @@
 
 .team__member:hover .team__name,
 .team__member:hover .team__role {
-  color: #ff0c08;
+  color: $brand-color;
 }

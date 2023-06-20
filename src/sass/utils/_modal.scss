@@ -225,7 +225,7 @@
     max-width: 210px;
     transform: scale(1.1);
     background-color: #d41443;
-    color: white;
+    color: $white-color;
   }
 }
 
@@ -236,7 +236,7 @@
   font-size: 20px;
   line-height: 23px;
 
-  color: #000000;
+  color: $color;
 }
 
 .group {
