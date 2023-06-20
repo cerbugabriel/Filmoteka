@@ -16,7 +16,7 @@ export async function fetchPopularMovieTrailer() {
 
     const trailerVideo = videoData.results.find(
       video => video.type === 'Trailer'
-    ); // Find the first trailer video
+    );
 
     if (trailerVideo) {
       const videoKey = trailerVideo.key;
