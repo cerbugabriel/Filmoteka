@@ -1,5 +1,6 @@
 import { getElement } from './library-utils';
 import { getStorageItem, getIds } from './library-utils';
+import { buildsLibrary } from '../buildLibrary';
 
 const toWatch = 'toWatch';
 const toQueue = 'toQueue';
@@ -24,6 +25,7 @@ export const libraryLocalStorageHandle = () => {
         clickedElement.textContent = 'REMOVE FROM WATCHED';
         clickedElement.dataset.action = 'toWatchRmv';
       }
+      buildsLibrary(toWatch);
     } else if (clickedElement.dataset.action === 'toQueue') {
       if (!queueIds.includes(id)) {
         queueStorage.push(movie);
@@ -31,16 +33,19 @@ export const libraryLocalStorageHandle = () => {
         clickedElement.textContent = 'REMOVE FROM QUEUE';
         clickedElement.dataset.action = 'toQueueRmv';
       }
+      buildsLibrary(toQueue);
     } else if (clickedElement.dataset.action === 'toWatchRmv') {
       watchStorage = watchStorage.filter(movie => movie.id !== id);
       setStorageItem(toWatch, watchStorage);
       clickedElement.textContent = 'ADD TO WATCHED';
       clickedElement.dataset.action = 'toWatch';
+      buildsLibrary(toWatch);
     } else if (clickedElement.dataset.action === 'toQueueRmv') {
       queueStorage = queueStorage.filter(movie => movie.id !== id);
       setStorageItem(toQueue, queueStorage);
       clickedElement.textContent = 'ADD TO QUEUE';
       clickedElement.dataset.action = 'toQueue';
+      buildsLibrary(toQueue);
     }
   });
 };
