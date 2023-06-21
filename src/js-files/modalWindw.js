@@ -69,7 +69,6 @@ closeModal.addEventListener('click', () => {
   modal.close();
 });
 function clearModalOnClose() {
-  console.log(window.target);
   const modalDataElements = modal.querySelectorAll('[class*="film-detail"]');
   modalDataElements.forEach(element => {
     element.innerHTML = '';
