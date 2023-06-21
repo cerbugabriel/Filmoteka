@@ -1,14 +1,11 @@
 // imports
-import {
-  fetchAllMovies,
-  findMovie,
-  handlePagination,
-} from './js-files/fetchMovies';
+import { fetchAllMovies } from './js-files/fetchMovies';
 import { handlePagination } from './js-files/utils';
 import { fetchPopularMovies } from './js-files/carousel';
 import { addToLocalStorag } from './js-files/locatStorage';
 import { handleModalBtns } from './js-files/handle-modal-btns';
 import { fetchPopularMovieTrailer } from './js-files/fetchTrailerMovie';
+import { findMovie, handlePagination } from './js-files/fetchMovies';
 
 fetchPopularMovieTrailer()
   .then(youtubeUrl => {
