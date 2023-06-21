@@ -29,6 +29,9 @@ export const setupGallery = (data, movieTypes, moviesGallery) => {
         >
       </div>
     <img src="${movieImg}" class="image" alt="${name}" />
+    <div class="overlay-text">
+        <h1>${Math.round(movie.vote_average * 10) / 10}</h1>
+    </div>
   <div class="container-info">
     <b class="title">${name}</b>
     <div class="cont-descr">
