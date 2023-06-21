@@ -287,7 +287,6 @@
       border: none;
       width: 100%;
       &:focus {
-        border: 2px solid red;
         outline: none;
       }
     }
@@ -312,6 +311,11 @@
         height: 16px;
         fill: white;
         stroke: black;
+        margin-bottom: -3px;
+        transition: transform 0.3s ease-in-out;
+        &:hover {
+          transform: rotate(360deg);
+        }
       }
       &--error {
         position: absolute;

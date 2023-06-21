@@ -5,6 +5,8 @@ import { fetchPopularMovies } from './js-files/carousel';
 import { addToLocalStorag } from './js-files/locatStorage';
 import { handleModalBtns } from './js-files/handle-modal-btns';
 import { fetchPopularMovieTrailer } from './js-files/fetchTrailerMovie';
+import { findMovie } from './js-files/findMovie';
+
 fetchPopularMovieTrailer()
   .then(youtubeUrl => {
     const container = document.querySelector('.video-frame');
@@ -27,6 +29,7 @@ const init = async () => {
   handlePagination();
   addToLocalStorag();
   handleModalBtns();
+  findMovie();
 };
 
 window.addEventListener('DOMContentLoaded', init);

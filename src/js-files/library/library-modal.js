@@ -70,3 +70,9 @@ function clearModalOnClose() {
     element.innerHTML = '';
   });
 }
+window.addEventListener('click', e => {
+  if (e.target == modal) {
+    clearModalOnClose();
+    modal.close();
+  }
+});
