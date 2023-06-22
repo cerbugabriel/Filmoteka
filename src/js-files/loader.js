@@ -1,8 +1,11 @@
 import Notiflix from 'notiflix';
 
 export function showLoader() {
-  Notiflix.Loading.standard('Loading...');
+  Notiflix.Loading.hourglass({
+    svgColor: '#B92F2C',
+  });
 }
+
 export function hideLoader() {
   Notiflix.Loading.remove();
 }
