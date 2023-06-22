@@ -1,7 +1,7 @@
 .header {
+  display: flex;
+  border: 2px solid red;
   &__library {
-    position: absolute;
-    width: 100%;
     //right: 5%;
     right: -916px;
   }
@@ -26,7 +26,6 @@
       background-color: white;
       border-radius: 100px;
       padding: 10px 26px;
-      position: relative;
       overflow: hidden;
       transition: box-shadow 0.3s ease-in-out;
 
@@ -68,7 +67,6 @@
       background-color: white;
       border-radius: 100px;
       padding: 10px 26px;
-      position: relative;
       overflow: hidden;
       transition: box-shadow 0.3s ease-in-out;
 
