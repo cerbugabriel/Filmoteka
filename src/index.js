@@ -6,6 +6,7 @@ import { addToLocalStorag } from './js-files/locatStorage';
 import { handleModalBtns } from './js-files/handle-modal-btns';
 import { fetchPopularMovieTrailer } from './js-files/fetchTrailerMovie';
 import { findMovie } from './js-files/findMovie';
+import { getFilterGenres, getMoviesYearFilter } from './js-files/filter';
 
 fetchPopularMovieTrailer()
   .then(youtubeUrl => {
@@ -30,6 +31,8 @@ const init = async () => {
   addToLocalStorag();
   handleModalBtns();
   findMovie();
+  getFilterGenres();
+  getMoviesYearFilter();
 };
 
 window.addEventListener('DOMContentLoaded', init);
