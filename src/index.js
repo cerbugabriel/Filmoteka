@@ -5,7 +5,7 @@ import { fetchPopularMovies } from './js-files/carousel';
 import { addToLocalStorag } from './js-files/locatStorage';
 import { handleModalBtns } from './js-files/handle-modal-btns';
 import { fetchPopularMovieTrailer } from './js-files/fetchPopularMovieTrailer';
-import { findMovie } from './js-files/findMovie';
+import { findMovie, handlePagination } from './js-files/fetchMovies';
 
 fetchPopularMovieTrailer()
   .then(youtubeUrl => {

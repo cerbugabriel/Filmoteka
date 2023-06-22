@@ -1,6 +1,6 @@
 // imports
 import getElement from './getElement';
-import { currentPage } from './utils';
+import { currentPage } from './fetchMovies';
 
 // variabiles
 const prevBtn = getElement('#prev-btn');

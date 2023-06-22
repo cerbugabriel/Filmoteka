@@ -26,6 +26,6 @@ export function showNotificationEmtyValue() {
   );
 }
 
-export function tooManyMovies() {
-  Notiflix.Notify.warning('Sooo many movies...');
+export function noMovie() {
+  Notiflix.Notify.warning('No movie was found, try another movie');
 }
