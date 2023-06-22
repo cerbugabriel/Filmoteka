@@ -58,7 +58,7 @@ const displayMovies = movies => {
 
       if (clickedMovie) {
         try {
-          const trailerKey = await fetchMovieTrailer(movie);
+          const trailerKey = await fetchMovieTrailer(clickedMovie);
 
           if (trailerKey) {
             const youtubeTrailerURL = `https://www.youtube.com/watch?v=${trailerKey}`;

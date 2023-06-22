@@ -4,18 +4,18 @@ export const fetchMovieTrailer = async movie => {
     const url = `${BASE_URL}/movie/${movie.id}/videos?api_key=${API_KEY}`;
     const resp = await fetch(url);
     const data = await resp.json();
-    const videos = data.results;
+    const videos = data.results.find(video => video.type === 'Trailer');
     console.log(videos);
 
-    if (videos.length > 0) {
-      const trailerVideo = videos.find(video => video.type === 'Trailer');
-      if (trailerVideo) {
-        return trailerVideo.key; // Return only the YouTube video key
-      }
-    }
-  } catch (err) {
-    console.log(err);
-  }
+    if (videos) {
+      const videoKey = trailerVideo.key;
+      const youtubeUrl = `https://www.youtube.com/embed/${videoKey}`;
 
-  return null;
+      return youtubeUrl;
+    } else {
+      throw new Error('No trailer found for the movie.');
+    }
+  } catch (error) {
+    console.error('Error:', error);
+  }
 };
