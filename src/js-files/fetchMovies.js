@@ -10,6 +10,7 @@ import {
   showNotificationEmtyValue,
   noMovie,
 } from './loader.js';
+import { changeNoteColor } from './change-note-color.js';
 import getElement from './getElement.js';
 const btnsContainer = getElement('.pagination');
 const SEARCH_BASE_URL = `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=`;
@@ -80,6 +81,7 @@ export const fetchAllMovies = async () => {
     setupGallery(movies, movieTypes, moviesGallery);
     createButtons(totalPages);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    changeNoteColor();
   } catch (err) {
     console.log(err);
     showNotification();
@@ -142,6 +144,7 @@ export const findMovie = async () => {
       } else {
         btnsContainer.classList.add('is-hidden');
       }
+      changeNoteColor();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (err) {
       console.log(err);
@@ -174,6 +177,7 @@ export const findMovieToPage = async () => {
       fetchAllMovies();
     }
     createButtons(totalPages);
+    changeNoteColor();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } catch (err) {
     console.log(err);
