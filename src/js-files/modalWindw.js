@@ -1,6 +1,8 @@
 import getElement from './getElement';
+import { fetchMovieTrailer } from './fetchMovieTrailer';
 
-const modal = getElement('#film_info_modal');
+const modal = getElement('.film_info_modal');
+const modalContainer = getElement('.modal');
 const modalImageContainer = getElement('.img_content');
 const modalVotes = getElement('.film-detail_votes');
 const modalVotes2 = getElement('.film-detail_votes2');
@@ -11,6 +13,8 @@ const modalFilmGenre = getElement('.film-detail_genre');
 const modalFilmDescription = getElement('.film-detail_description');
 const closeModal = getElement('#close-button');
 const gallery = getElement('.gallery');
+const playButton = getElement('.youtubeButton');
+const trailerContainer = getElement('.trailer');
 
 gallery.addEventListener('click', galleryHandler);
 
@@ -27,7 +31,6 @@ function galleryHandler(e) {
   modalVotes2.innerHTML = ` / ${voteCount}`;
 
   // add movie id to the modal
-  const modalContainer = getElement('.modal');
   const movieId = element.dataset.id;
   modalContainer.dataset.movieId = movieId;
 
@@ -64,20 +67,57 @@ function galleryHandler(e) {
 
   modal.showModal();
 }
+
+playButton.addEventListener('click', async () => {
+  const movieId = modalContainer.getAttribute('data-movie-id');
+  console.log(movieId);
+  const trailerId = await fetchMovieTrailer(movieId);
+
+  trailerContainer.innerHTML = `<iframe
+                                  width="560"
+                                  height="315"
+                                  src="https://www.youtube.com/embed/${trailerId}"
+                                  title="YouTube video player"
+                                  frameborder="0"
+                                  allow="accelerometer;
+                                  autoplay;
+                                  clipboard-write;
+                                  encrypted-media;
+                                  gyroscope;
+                                  picture-in-picture;
+                                  web-share"
+                                  allowfullscreen
+                                >
+                                </iframe>`;
+});
+
+// Close modal section
 closeModal.addEventListener('click', () => {
   clearModalOnClose();
   modal.close();
 });
+
 function clearModalOnClose() {
   const modalDataElements = modal.querySelectorAll('[class*="film-detail"]');
   modalDataElements.forEach(element => {
     element.innerHTML = '';
   });
+  trailerContainer.innerHTML = '';
 }
 
 // function to close modal by  outside click
 window.addEventListener('click', e => {
   if (e.target == modal) {
+    clearModalOnClose();
+    modal.close();
+  }
+});
+
+// function to close modal by  esc
+document.addEventListener('keydown', event => {
+  event.preventDefault();
+  console.log(event);
+  if (event.keyCode == 27) {
     clearModalOnClose();
     modal.close();
   }

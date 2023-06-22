@@ -51,14 +51,15 @@ const displayMovies = movies => {
     watchTrailerLink.addEventListener('click', async event => {
       event.preventDefault();
 
-      const clickedMovieId = event.target.dataset.movieId;
+      // const clickedMovieId = event.target.dataset.movieId;
+      const clickedMovieId = watchTrailerLink.getAttribute('data-movie-id');
       const clickedMovie = movies.find(
         movie => movie.id === parseInt(clickedMovieId)
       );
 
-      if (clickedMovie) {
+      if (clickedMovie.id) {
         try {
-          const trailerKey = await fetchMovieTrailer(clickedMovie);
+          const trailerKey = await fetchMovieTrailer(clickedMovie.id);
 
           if (trailerKey) {
             const youtubeTrailerURL = `https://www.youtube.com/watch?v=${trailerKey}`;
