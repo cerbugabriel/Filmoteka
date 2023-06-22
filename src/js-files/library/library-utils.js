@@ -5,7 +5,7 @@ export const getElement = selection => {
   if (element) {
     return element;
   }
-  throw new Error(`the ${selection} dose not exist`);
+  throw new Error(`the ${selection} does not exist`);
 };
 
 export function getIds(arr) {

@@ -74,9 +74,7 @@ export const fetchAllMovies = async () => {
   try {
     const moviesGallery = getElement('.gallery');
 
-    const url = `${BASE_URL}/trending/all/day?page=${currentPage}&api_key=${API_KEY}`;
-    const resp = await axios.get(url);
-    const data = resp.data;
+    const data = await getAllMovies();
     let totalPages = data.total_pages;
     totalPages = totalPages / 2;
     const movies = data.results;
@@ -91,6 +89,17 @@ export const fetchAllMovies = async () => {
     hideLoader();
   }
 };
+
+export async function getAllMovies() {
+  try {
+    const url = `${BASE_URL}/trending/all/day?page=${currentPage}&api_key=${API_KEY}`;
+    const resp = await axios.get(url);
+    const data = resp.data;
+    return data;
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 export async function getMoviesType() {
   try {
@@ -175,3 +184,18 @@ export const findMovieToPage = async () => {
     hideLoader();
   }
 };
+export async function getFilteredMovies(obiect) {
+  try {
+    const searchParams = new URLSearchParams({
+      api_key: `${API_KEY}`,
+      primary_release_year: obiect.year,
+      with_genres: this.genre,
+    });
+    const url = `${BASE_URL}/discover/movie?${searchParams}`;
+    // const url = `${BASE_URL}/discover/movie?${searchParams}&vote_average.gte=${obiect.vote}`;
+    const response = await axios.get(url);
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+}

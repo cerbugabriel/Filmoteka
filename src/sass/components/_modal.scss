@@ -16,7 +16,7 @@
   z-index: 5;
   margin: auto auto;
   border: none;
-  max-height: 558px;
+  // max-height: 558px;
 }
 
 .modal {
@@ -27,7 +27,7 @@
   width: 100%;
   max-width: 806px;
   height: 100%;
-  max-height: 558px;
+  // max-height: 558px;
   border-radius: 3px;
   height: max-content;
 }
@@ -58,7 +58,7 @@
   .content {
     display: flex;
     flex-direction: column;
-    max-height: 460px;
+    // max-height: 460px;
     overflow-y: scroll;
     width: 245px;
     margin: 0;
@@ -74,7 +74,7 @@
   width: auto;
   border-radius: 5px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 767px) {
@@ -334,4 +334,13 @@ body.darkmode .group1 {
   border-radius: 5px;
   font-size: 11px;
   margin: 7px 5px 1px;
+}
+
+#Ybtn {
+  background: transparent;
+  border: none;
+}
+
+.youTube {
+  fill: red;
 }

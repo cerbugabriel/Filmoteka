@@ -1,0 +1,79 @@
+.filter_form__select {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  background-color: inherit;
+  padding: 1px;
+  display: inline-block;
+  background-color: #272e34;
+}
+.filter_form__select > option {
+  background-color: #272e34;
+  color: white;
+}
+.filter_form__select:not(:last-child) {
+  margin-right: 3px;
+  margin-bottom: 8px;
+}
+
+.filter_form__select:last-child {
+  margin-bottom: 9px;
+}
+
+.dropbtn {
+  background-color: #4caf50;
+  color: white;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #272e34;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  flex-direction: column;
+  color: $color;
+}
+
+.dropdown-content .filter_form__select {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.dropdown-content .filter_form__select {
+  background-color: #272e34;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.filter_form {
+  position: absolute;
+  display: flex;
+
+  text-align: center;
+  font-size: 13px;
+  top: 310px;
+  left: 35%;
+  gap: 20px;
+}
+
+.filter_form {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
