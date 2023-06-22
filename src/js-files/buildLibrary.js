@@ -8,6 +8,7 @@ import {
 } from './library/library-utils';
 import { createLibraryDOM } from './library/createLibraryDOM';
 import { getElement } from './library/library-utils';
+import { changeNoteColor } from './change-note-color';
 
 const toWatch = 'toWatch';
 const toQueue = 'toQueue';
@@ -28,6 +29,7 @@ export async function buildsLibrary(selectedLibrary) {
       noMovie.classList.add('is-hidden');
     }
     createLibraryDOM(movies);
+    changeNoteColor();
   } catch (err) {
     console.log(err);
   } finally {
