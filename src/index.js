@@ -4,9 +4,11 @@ import { handlePagination } from './js-files/utils';
 import { fetchPopularMovies } from './js-files/carousel';
 import { addToLocalStorag } from './js-files/locatStorage';
 import { handleModalBtns } from './js-files/handle-modal-btns';
-import { fetchPopularMovieTrailer } from './js-files/fetchTrailerMovie';
-import { findMovie } from './js-files/findMovie';
+
 import { getFilterGenres, getMoviesYearFilter } from './js-files/filter';
+import { fetchPopularMovieTrailer } from './js-files/fetchPopularMovieTrailer';
+import { findMovie, handlePagination } from './js-files/fetchMovies';
+import { fetchMovieTrailer } from './js-files/fetchMovieTrailer';
 
 fetchPopularMovieTrailer()
   .then(youtubeUrl => {
@@ -25,9 +27,11 @@ fetchPopularMovieTrailer()
   });
 
 const init = async () => {
-  fetchPopularMovies();
-  fetchAllMovies();
-  handlePagination();
+  await fetchPopularMovies();
+  await fetchMovieTrailer();
+  await fetchAllMovies();
+  await findMovie();
+  await handlePagination();
   addToLocalStorag();
   handleModalBtns();
   findMovie();
@@ -36,7 +40,7 @@ const init = async () => {
 };
 
 window.addEventListener('DOMContentLoaded', init);
-
+//dark-light-mode
 const body = document.querySelector('body');
 const dlBtn = document.querySelector('.dl-btn');
 const iconSun = document.querySelector('.fa-sun');

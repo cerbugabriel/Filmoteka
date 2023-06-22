@@ -1,8 +1,11 @@
 import Notiflix from 'notiflix';
 
 export function showLoader() {
-  Notiflix.Loading.standard('Loading...');
+  Notiflix.Loading.hourglass({
+    svgColor: '#B92F2C',
+  });
 }
+
 export function hideLoader() {
   Notiflix.Loading.remove();
 }
@@ -23,6 +26,6 @@ export function showNotificationEmtyValue() {
   );
 }
 
-export function tooManyMovies() {
-  Notiflix.Notify.warning('Sooo many movies...');
+export function noMovie() {
+  Notiflix.Notify.warning('No movie was found, try another movie');
 }
