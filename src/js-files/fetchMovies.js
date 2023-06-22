@@ -8,6 +8,7 @@ import {
   hideLoader,
   showNotification,
   showNotificationEmtyValue,
+  noMovie,
 } from './loader.js';
 import getElement from './getElement.js';
 const btnsContainer = getElement('.pagination');
@@ -67,7 +68,6 @@ function goToPage(e) {
 export const fetchAllMovies = async () => {
   showLoader();
   btnsFor = 'allMovies';
-  console.log(btnsFor);
   if (btnsContainer.classList.contains('is-hidden')) {
     btnsContainer.classList.remove('is-hidden');
   }
@@ -118,8 +118,6 @@ export const findMovie = async () => {
         showNotificationEmtyValue();
         return;
       }
-      console.log(btnsFor);
-      console.log(currentPage);
       searchInput.value = searchValue;
       const url = `${SEARCH_BASE_URL}${currentPage}${apiKeyPlus}${searchValue}`;
       const resp = await axios.get(url);
@@ -128,7 +126,6 @@ export const findMovie = async () => {
       const totalPages = data.total_pages;
       const movies = data.results;
       const movieTypes = await getMoviesType();
-
       setupGallery(movies, movieTypes, moviesGallery);
       if (totalResults === 0) {
         noMovie();
