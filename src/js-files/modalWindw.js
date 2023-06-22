@@ -27,7 +27,7 @@ function galleryHandler(e) {
   const average = elementInfo.getAttribute('data-vote-avg');
   const averageCountNumber = Number(average);
   const averageCountNumberRound = Math.round(averageCountNumber * 10) / 10;
-  modalVotes.innerHTML = ` ${averageCountNumberRound} `;
+  modalVotes.innerHTML = ` ${averageCountNumberRound.toFixed(1)} `;
   modalVotes2.innerHTML = ` / ${voteCount}`;
 
   // add movie id to the modal
@@ -74,8 +74,7 @@ playButton.addEventListener('click', async () => {
   const trailerId = await fetchMovieTrailer(movieId);
 
   trailerContainer.innerHTML = `<iframe
-                                  width="560"
-                                  height="315"
+                                 
                                   src="https://www.youtube.com/embed/${trailerId}"
                                   title="YouTube video player"
                                   frameborder="0"
