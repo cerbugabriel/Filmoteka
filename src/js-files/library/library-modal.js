@@ -66,7 +66,6 @@ export const libraryModal = () => {
 
 playButton.addEventListener('click', async () => {
   const movieId = modalContainer.getAttribute('data-movie-id');
-  console.log(movieId);
   const trailerId = await fetchMovieTrailer(movieId);
 
   trailerContainer.innerHTML = `<iframe

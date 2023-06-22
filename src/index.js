@@ -1,14 +1,14 @@
 // imports
 import { fetchAllMovies } from './js-files/fetchMovies';
-import { handlePagination } from './js-files/utils';
 import { fetchPopularMovies } from './js-files/carousel';
 import { addToLocalStorag } from './js-files/locatStorage';
 import { handleModalBtns } from './js-files/handle-modal-btns';
-
+import { changeNoteColor } from './js-files/change-note-color';
 import { getFilterGenres, getMoviesYearFilter } from './js-files/filter';
 import { fetchPopularMovieTrailer } from './js-files/fetchPopularMovieTrailer';
 import { findMovie, handlePagination } from './js-files/fetchMovies';
 import { fetchMovieTrailer } from './js-files/fetchMovieTrailer';
+import { changeNoteColor } from './js-files/change-note-color';
 
 fetchPopularMovieTrailer()
   .then(youtubeUrl => {
@@ -37,6 +37,7 @@ const init = async () => {
   findMovie();
   getFilterGenres();
   getMoviesYearFilter();
+  changeNoteColor();
 };
 
 window.addEventListener('DOMContentLoaded', init);

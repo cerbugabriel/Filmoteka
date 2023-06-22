@@ -29,7 +29,6 @@ export const handlePagination = () => {
 // functions
 
 function goToPage(e) {
-  console.log(btnsFor);
   const btn = e.target;
 
   if (btn.dataset.page) {
@@ -61,7 +60,6 @@ function goToPage(e) {
       findMovieToPage();
     }
   }
-  console.log(currentPage);
 }
 
 // exports
