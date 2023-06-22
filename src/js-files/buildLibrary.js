@@ -17,7 +17,7 @@ const noMovie = getElement('.no-movie');
 
 // https://api.themoviedb.org/3/movie/298618?api_key=53b2ac0d64cbeedea763734f4fe8a4ce
 
-export const buildsLibrary = async selectedLibrary => {
+export async function buildsLibrary(selectedLibrary) {
   showLoader();
   noMovie.classList.remove('is-hidden');
   try {
@@ -33,7 +33,7 @@ export const buildsLibrary = async selectedLibrary => {
   } finally {
     hideLoader();
   }
-};
+}
 
 const moviesDetails = async localStorageMovies => {
   const movieDetailsArray = [];
