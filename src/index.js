@@ -30,6 +30,7 @@ const init = async () => {
   addToLocalStorag();
   handleModalBtns();
   findMovie();
+  fetchMovieTrailer();
 };
 
 window.addEventListener('DOMContentLoaded', init);
