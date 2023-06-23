@@ -1,152 +1,138 @@
-.header {
+.library-header {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  border: 2px solid red;
-  &__library {
-    //right: 5%;
-    right: -916px;
+  justify-content: center;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    &--bar {
+      display: flex;
+      flex-direction: column;
+      gap: 250px;
+    }
   }
-
-  &__btn {
+  &__navigation {
+    &--menu {
+      display: flex;
+      gap: 4px;
+      &--item {
+        &--link {
+          text-align: center;
+          color: black;
+          text-transform: uppercase;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 14px;
+          display: flex;
+          align-items: center;
+          padding: 10px 26px;
+          background-color: white;
+          border-radius: 100px;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+  &__options {
+    display: flex;
+    justify-content: end;
+    gap: 4px;
+    &--btn {
+      background-color: $white-color;
+      color: $brand-color;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      padding: 10px 23px;
+      border: 1px solid $white-color;
+      border-radius: 100px;
+      transition: transform 0.3s ease-in-out;
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: scale(1);
+        transition: transform 0.3s ease-in-out;
+        z-index: -1;
+        &:hover {
+          transform: scale(0.9);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+  &__logo {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 4px;
-    padding-bottom: 8px;
-  }
+    justify-content: start;
 
-  &__watched {
-    &--item {
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 14px;
+    &--link {
+      color: white;
+      gap: 8px;
       display: flex;
-      align-items: center;
-      text-align: center;
-      text-transform: uppercase;
-      background-color: white;
-      border-radius: 100px;
-      padding: 10px 26px;
-      overflow: hidden;
-      transition: box-shadow 0.3s ease-in-out;
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transform: scale(0);
-        transition: transform 0.3s ease-in-out;
-        z-index: -1;
-      }
-
-      &:hover {
-        transform: scale(0.9);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
-        &::before {
-          transform: scale(1);
-        }
-      }
-
-      &-link {
-        color: $brand-color;
-        transition: transform 0.3s ease-in-out;
-      }
+      flex-direction: row;
+      flex-wrap: nowrap;
     }
-  }
-
-  &__queue {
-    &--item {
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 14px;
+    &--icon {
       display: flex;
-      align-items: center;
-      text-align: center;
-      text-transform: uppercase;
-      background-color: white;
-      border-radius: 100px;
-      padding: 10px 26px;
       overflow: hidden;
-      transition: box-shadow 0.3s ease-in-out;
-
-      &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transform: scale(0);
-        transition: transform 0.3s ease-in-out;
-        z-index: -1;
-      }
-
-      &:hover {
-        transform: scale(0.9);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
-        &::before {
-          transform: scale(1);
-        }
-      }
-
-      &-link {
-        color: $brand-color;
-        transition: transform 0.3s ease-in-out;
+      width: 32px;
+      height: 32px;
+      &-svg {
+        width: 32px;
+        height: 32px;
+        fill: none;
+        animation: filmSvg 2s infinite;
+        transform: rotateY(40deg);
+        fill: white;
       }
     }
   }
 }
-
-.btns-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-
-  &__btn {
-    background-color: $white-color;
-    color: $brand-color;
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    padding: 10px 23px;
-    border: 1px solid $white-color;
-    border-radius: 100px;
-
-    &:hover {
-      cursor: pointer;
-      color: $white-color;
-      background-color: #b92f2c;
-      border-color: #b92f2c;
-      box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
-      transform: scale(0.9);
-    }
-  }
-}
-
 .active-library {
   color: $white-color;
   background-color: #b92f2c;
   border-color: #b92f2c;
   box-shadow: 0px 0px 7px rgba(27, 27, 27, 0.15);
 }
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  .header {
-    &__library {
-      right: -462px;
+@media screen and (min-width: 768px) {
+  .library-header {
+    &__container {
+      align-items: center;
+    }
+    &__container--bar {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 90%;
+      gap: 0;
+    }
+    &__logo {
+      align-self: flex-start;
+      &--icon {
+        width: 40px;
+        height: 40px;
+        &-svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
     }
   }
 }
-
-@media (max-width: 768px) {
-  .header {
-    &__library {
-      left: 33vw;
-      right: 15vw;
-      top: 48%;
+@media screen and (min-width: 1280px) {
+  .library-header__logo {
+    margin-left: 60px;
+    &--icon {
+      width: 59px;
+      height: 59px;
+      &-svg {
+        width: 59px;
+        height: 59px;
+      }
     }
   }
 }
