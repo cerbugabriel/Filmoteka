@@ -113,7 +113,7 @@ window.addEventListener('click', e => {
 });
 
 // function to close modal by  esc
-document.addEventListener('keydown', event => {
+modal.addEventListener('keydown', event => {
   event.preventDefault();
   console.log(event);
   if (event.keyCode == 27) {

@@ -28,7 +28,7 @@ fetchPopularMovieTrailer()
 
 const init = async () => {
   await fetchPopularMovies();
-  await fetchMovieTrailer();
+  // await fetchMovieTrailer();
   await fetchAllMovies();
   await findMovie();
   await handlePagination();

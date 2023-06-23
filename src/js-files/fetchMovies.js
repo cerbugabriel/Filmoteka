@@ -118,7 +118,6 @@ export const findMovie = async () => {
     e.preventDefault();
     showLoader();
     btnsFor = 'search';
-    currentPageExport = 1;
     currentPage = 1;
     searchValue = searchInput.value;
     try {
