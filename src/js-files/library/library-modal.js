@@ -69,8 +69,6 @@ playButton.addEventListener('click', async () => {
   const trailerId = await fetchMovieTrailer(movieId);
 
   trailerContainer.innerHTML = `<iframe
-                                  width="560"
-                                  height="315"
                                   src="https://www.youtube.com/embed/${trailerId}"
                                   title="YouTube video player"
                                   frameborder="0"
