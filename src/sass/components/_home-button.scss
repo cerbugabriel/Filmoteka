@@ -1,0 +1,45 @@
+.home-btn {
+  //background-color: chocolate;
+  position: absolute;
+  top: 409px;
+  left: 40vw;
+  right: 40vw;
+  display: flex;
+  justify-content: center;
+}
+.home-button {
+  display: flex;
+  justify-content: center;
+}
+
+.link-button {
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 767px) and (max-width: 1200px) {
+  .home-btn {
+    top: 200px;
+  }
+  .link-button {
+    width: 15vw;
+  }
+}
+@media (min-width: 501px) and (max-width: 767px) {
+  .home-btn {
+    top: 131px;
+  }
+  .link-button {
+    width: 20vw;
+  }
+}
+@media (min-width: 300px) and (max-width: 500px) {
+  .home-btn {
+    top: 106px;
+  }
+  .link-button {
+    width: 20vw;
+    background-color: $color;
+    color: $white-color;
+  }
+}
