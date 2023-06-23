@@ -42,7 +42,7 @@
 
     height: 460px;
     &--bar {
-      padding-bottom: 285px;
+      padding-bottom: 280px;
     }
     &__logo {
       display: flex;
@@ -89,6 +89,10 @@
         color: white;
       }
       .header__menu__list__item--link {
+        background-color: black;
+        color: white;
+      }
+      .library-header__navigation--menu--item--link {
         background-color: black;
         color: white;
       }
