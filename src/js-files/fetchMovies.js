@@ -185,15 +185,16 @@ export const findMovieToPage = async () => {
     hideLoader();
   }
 };
-export async function getFilteredMovies(obiect) {
+
+export async function getFilteredMovies(filter) {
   try {
     const searchParams = new URLSearchParams({
       api_key: `${API_KEY}`,
-      primary_release_year: obiect.year,
-      with_genres: this.genre,
+      primary_release_year: filter.year,
+      with_genres: filter.genre,
     });
-    const url = `${BASE_URL}/discover/movie?${searchParams}`;
-    // const url = `${BASE_URL}/discover/movie?${searchParams}&vote_average.gte=${obiect.vote}`;
+    // const url = `${BASE_URL}/discover/movie?${searchParams}`;
+    const url = `${BASE_URL}/discover/movie?${searchParams}&vote_average.gte=${filter.vote}`;
     const response = await axios.get(url);
     return response.data;
   } catch (error) {

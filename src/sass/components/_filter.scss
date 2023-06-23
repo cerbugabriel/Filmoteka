@@ -1,11 +1,11 @@
 .filter_form__select {
   outline: none;
   border: none;
-  color: white;
+  color: $color;
   background-color: inherit;
   padding: 1px;
   display: inline-block;
-  background-color: #272e34;
+  background-color: $white-color;
   border-radius: 7px;
 }
 .filter_form__select > option {
@@ -27,8 +27,8 @@
 
   text-align: center;
   font-size: 13px;
-  top: 80%;
-  left: 9%;
+  top: 77%;
+  left: 3%;
   gap: 20px;
 }
 
@@ -42,4 +42,15 @@
     top: 25%;
     left: 10%;
   }
+}
+
+@media screen and (min-width: 992px) {
+  .filter_form {
+    left: 8%;
+  }
+}
+
+body.darkmode .filter_form__select {
+  color: $white-color;
+  background-color: #272e34;
 }
